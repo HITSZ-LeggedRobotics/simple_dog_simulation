@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="world_name" default="worlds/empty.world"/>
+
+  <arg name="laser_enabled" default="true"/>
+  <arg name="kinect_enabled" default="true"/>
+  <arg name="robot_namespace" default="/"/>
+
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0.5"/>
+  <arg name="yaw" default="3.1416"/>
+
+<node name="spawn_simpledog_model" pkg="gazebo_ros" type="spawn_model"
+    args="-x $(arg x)
+    -y $(arg y)
+    -z $(arg z)
+    -Y $(arg yaw)
+    -unpause
+    -urdf
+    -param robot_description
+    -model $(arg robot_namespace)" />
+
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find simpledog)/worlds/simpledog_terrian.world"/>
+    <!--<arg name="world_name" value="worlds/empty.world"/>-->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/simpledog.urdf.xacro'
+  --inorder
+  robot_namespace:=$(arg robot_namespace)
+  kinect_enabled:=$(arg kinect_enabled)"/>
+  <!--<param name="robot_description" textfile="$(find simpledog)/urdf/simpledog.urdf.xacro"/>-->
+
+  <!--<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />-->
+
+<!-- Load controller configuration -->
+<rosparam command="load" file="$(find simpledog)/config/control.yaml" />
+
+<!-- Spawn controllers -->
+<node name="base_controller_spawner" pkg="controller_manager" type="spawner"
+      args="simpledog_joint_publisher
+            front_left_1_joint_position_controller
+            front_left_2_joint_position_controller
+            front_left_3_joint_position_controller
+            front_right_1_joint_position_controller
+            front_right_2_joint_position_controller
+            front_right_3_joint_position_controller
+            rear_right_1_joint_position_controller
+            rear_right_2_joint_position_controller
+            rear_right_3_joint_position_controller
+            rear_left_1_joint_position_controller
+            rear_left_2_joint_position_controller
+            rear_left_3_joint_position_controller"/>
+
+<!--get the real pose and tf from model states of gazebo-->
+  <node pkg="sim_assiants" type="pose_pub_node" name="pose_pub_node"/>
+<!--get joint states and pub the robot tf-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+<!-- Spawn robot in gazebo (the world file has already include the robot)-->
+<!--<node name="spawn_simpledog_model" pkg="gazebo_ros" type="spawn_model"
+    args="-x $(arg x)
+    -y $(arg y)
+    -z $(arg z)
+    -Y $(arg yaw)
+    -unpause
+    -urdf
+    -param robot_description
+    -model $(arg robot_namespace)" />-->
+</launch>
