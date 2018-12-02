@@ -1,6 +1,6 @@
 # simple_dog_simulation
 A simulation four leg robot simulation with gazebo
-
+**TODO(Shunyao): add a foot contact sensor**
 ## Build
 ```
 cd your_catkin_ws/src
