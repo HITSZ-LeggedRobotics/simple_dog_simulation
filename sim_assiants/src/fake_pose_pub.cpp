@@ -19,7 +19,7 @@ FakePose::FakePose(ros::NodeHandle& nodehandle)
 //    seq.registerCallback(&FakePose::modelStatesCallback,this);
 
     //timeSeqSub_ = message_filters::Subscriber<gazebo_msgs::ModelStates>("/gazebo/model_states",1);
-    modelStatesSubLoopThread_ = boost::thread(boost::bind(&FakePose::modelStatesSubLoopThread, this));
+    // modelStatesSubLoopThread_ = boost::thread(boost::bind(&FakePose::modelStatesSubLoopThread, this));
 }
 
 FakePose::~FakePose(){};
@@ -43,13 +43,13 @@ void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& mod
 
 
     fakePosePub_.publish(fakePoseMsg_);
-    ros::Duration(0.02).sleep();
+    // ros::Duration(0.01).sleep();
 }
 
 void FakePose::modelStatesSubLoopThread()
 {
     static const double timeout = 0.02;
-    ros::Rate rate(50);
+    ros::Rate rate(100);
     while(nodeHandle_.ok())
     {
         ROS_INFO("in test thread");
@@ -61,5 +61,3 @@ void FakePose::modelStatesSubLoopThread()
 }
 
 }
-
-
