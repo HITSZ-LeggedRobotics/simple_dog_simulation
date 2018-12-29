@@ -1,6 +1,8 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include "geometry_msgs/PoseWithCovarianceStamped.h"
+#include "nav_msgs/Odometry.h"
+#include "geometry_msgs/Twist.h"
 #include "tf/transform_listener.h"
 #include "gazebo_msgs/ModelStates.h"
 #include "fake_pose.h"
@@ -28,6 +30,7 @@ void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& mod
 {
     ROS_INFO("Recieved a model states");
     fakePoseMsg_.pose.pose = modelStatesMsg->pose[9];
+
     tf::Transform odom2base;
     tf::Quaternion q;
     q.setW(modelStatesMsg->pose[9].orientation.w);

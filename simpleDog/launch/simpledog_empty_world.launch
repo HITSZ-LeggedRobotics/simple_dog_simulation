@@ -22,7 +22,7 @@
     <arg name="debug" value="false"/>
   </include>
 
-  <param name="robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/simpledog.urdf.xacro'
+  <param name="/free_gait/robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/simpledog.urdf.xacro'
   --inorder
   robot_namespace:=$(arg robot_namespace)
   kinect_enabled:=$(arg kinect_enabled)"/>
