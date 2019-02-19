@@ -4,9 +4,9 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
         - /Status1
-        - /RobotModel1/Links1
+        - /FreeGaitPreview1
+        - /FreeGaitPreview1/Settings1
       Splitter Ratio: 0.5
     Tree Height: 565
   - Class: rviz/Selection
@@ -62,7 +62,7 @@ Visualization Manager:
         base_link:
           Alpha: 1
           Show Axes: false
-          Show Trail: true
+          Show Trail: false
           Value: true
         camera_frame_optical:
           Alpha: 1
@@ -106,12 +106,12 @@ Visualization Manager:
         lf_foot_Link:
           Alpha: 1
           Show Axes: false
-          Show Trail: true
+          Show Trail: false
           Value: true
         lh_foot_Link:
           Alpha: 1
           Show Axes: false
-          Show Trail: true
+          Show Trail: false
           Value: true
         rear_left_1_Link:
           Alpha: 1
@@ -146,12 +146,12 @@ Visualization Manager:
         rf_foot_Link:
           Alpha: 1
           Show Axes: false
-          Show Trail: true
+          Show Trail: false
           Value: true
         rh_foot_Link:
           Alpha: 1
           Show Axes: false
-          Show Trail: true
+          Show Trail: false
           Value: true
       Name: RobotModel
       Robot Description: robot_description
@@ -164,15 +164,99 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        base_link:
+          Value: true
+        front_left_1_Link:
+          Value: true
+        front_left_2_Link:
+          Value: true
+        front_left_3_Link:
+          Value: true
+        front_right_1_Link:
+          Value: true
+        front_right_2_Link:
+          Value: true
+        front_right_3_Link:
+          Value: true
+        lf_foot_Link:
+          Value: true
+        lh_foot_Link:
+          Value: true
+        odom:
+          Value: true
+        rear_left_1_Link:
+          Value: true
+        rear_left_2_Link:
+          Value: true
+        rear_left_3_Link:
+          Value: true
+        rear_right_1_Link:
+          Value: true
+        rear_right_2_Link:
+          Value: true
+        rear_right_3_Link:
+          Value: true
+        rf_foot_Link:
+          Value: true
+        rh_foot_Link:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        odom:
+          base_link:
+            front_left_1_Link:
+              front_left_2_Link:
+                front_left_3_Link:
+                  lf_foot_Link:
+                    {}
+            front_right_1_Link:
+              front_right_2_Link:
+                front_right_3_Link:
+                  rf_foot_Link:
+                    {}
+            rear_left_1_Link:
+              rear_left_2_Link:
+                rear_left_3_Link:
+                  rh_foot_Link:
+                    {}
+            rear_right_1_Link:
+              rear_right_2_Link:
+                rear_right_3_Link:
+                  lh_foot_Link:
+                    {}
       Update Interval: 0
       Value: true
+    - Class: free_gait_rviz_plugin/FreeGaitPreview
+      Enabled: true
+      Name: FreeGaitPreview
+      Playback:
+        Playback Speed: 1
+        Time: 1.99899995
+      Settings:
+        Auto En/Disable Visuals: false
+        Auto Hide When: Reached End of Preview
+        Auto-Play: true
+        Feedback Topic: ""
+        Goal Topic: /free_gait/preview_topic
+        Preview Rate: 1000
+        Result Topic: ""
+        Robot Model: ""
+        Robot State Topic: ""
+        Start State: Reset to Real Robot State
+        TF Prefix: ""
+      Value: true
+      Visuals:
+        End Effector Targets:
+          Color: 0; 0; 1
+          Value: true
+        End Effector Trajectories: true
+        Stances: true
+        Surface Normals: true
+        Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48

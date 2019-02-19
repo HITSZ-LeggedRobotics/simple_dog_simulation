@@ -17,7 +17,7 @@
   <param name = "/free_gait/robot_description"
          value = "/home/hitstar/catkin_ws/src/quadruped_locomotion-dev/quadruped_model/urdf/simpledog.urdf"
          />
- <param name="/free_gait/adapter_plugin/preview" value="free_gait_core/AdapterDummy" />
+ <param name="/free_gait/adapter_plugin/preview" value="free_gait_ros/AdapterDummy" />
  <param name="/free_gait/adapter_ros_interface_plugin" value="free_gait_ros/AdapterRosInterfaceDummy" />
   <param
     name="use_gui"
@@ -35,6 +35,5 @@
     pkg="rviz"
     type="rviz"
     args="-d $(find simpledog)/urdf.rviz"
-    output="screen"
-    launch-prefix="xterm -e gdb --args"/>
+    output="screen"/>
 </launch>
