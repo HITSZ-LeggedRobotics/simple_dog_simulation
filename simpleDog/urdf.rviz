@@ -164,70 +164,13 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        base_link:
-          Value: true
-        front_left_1_Link:
-          Value: true
-        front_left_2_Link:
-          Value: true
-        front_left_3_Link:
-          Value: true
-        front_right_1_Link:
-          Value: true
-        front_right_2_Link:
-          Value: true
-        front_right_3_Link:
-          Value: true
-        lf_foot_Link:
-          Value: true
-        lh_foot_Link:
-          Value: true
-        odom:
-          Value: true
-        rear_left_1_Link:
-          Value: true
-        rear_left_2_Link:
-          Value: true
-        rear_left_3_Link:
-          Value: true
-        rear_right_1_Link:
-          Value: true
-        rear_right_2_Link:
-          Value: true
-        rear_right_3_Link:
-          Value: true
-        rf_foot_Link:
-          Value: true
-        rh_foot_Link:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        odom:
-          base_link:
-            front_left_1_Link:
-              front_left_2_Link:
-                front_left_3_Link:
-                  lf_foot_Link:
-                    {}
-            front_right_1_Link:
-              front_right_2_Link:
-                front_right_3_Link:
-                  rf_foot_Link:
-                    {}
-            rear_left_1_Link:
-              rear_left_2_Link:
-                rear_left_3_Link:
-                  rh_foot_Link:
-                    {}
-            rear_right_1_Link:
-              rear_right_2_Link:
-                rear_right_3_Link:
-                  lh_foot_Link:
-                    {}
+        {}
       Update Interval: 0
       Value: true
     - Class: free_gait_rviz_plugin/FreeGaitPreview
@@ -235,7 +178,6 @@ Visualization Manager:
       Name: FreeGaitPreview
       Playback:
         Playback Speed: 1
-        Time: 1.99899995
       Settings:
         Auto En/Disable Visuals: false
         Auto Hide When: Reached End of Preview
@@ -246,7 +188,7 @@ Visualization Manager:
         Result Topic: ""
         Robot Model: ""
         Robot State Topic: ""
-        Start State: Reset to Real Robot State
+        Start State: Continue Previewed State
         TF Prefix: ""
       Value: true
       Visuals:
@@ -319,4 +261,4 @@ Window Geometry:
     collapsed: false
   Width: 1200
   X: 60
-  Y: 564
+  Y: 26
