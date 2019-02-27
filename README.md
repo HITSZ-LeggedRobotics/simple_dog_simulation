@@ -10,18 +10,14 @@ source ~/.bashrc
 ## Usage
 - Launch dog model in a empty world
 `roslaunch simpledog simpledog_empty_world.launch`
-
-  --------------------------------------------------------------------------------
 - Launch just RVIZ
 `roslaunch simpledog simpledog_display.launch`
-  --------------------------------------------------------------------------------
 - Launch in a world with some obstacles
 `roslaunch simpledog simple_dog_simulation.launch`
-  --------------------------------------------------------------------------------
 - Pose Publisher
 `rosrun sim_assiants pose_pub_node`
   > this is to publish the absolute base_link pose in world(odom frame), and TF, and a customed RobotState message
-  --------------------------------------------------------------------------------
+
   >Node [/pose_pub_node]
   >>Publications:
        * /gazebo/robot_states [free_gait_msgs/RobotState]
@@ -29,12 +25,12 @@ source ~/.bashrc
        * /rosout [rosgraph_msgs/Log]
        * /tf [tf2_msgs/TFMessage]
 
+
   >>Subscriptions:
        * /clock [rosgraph_msgs/Clock]
        * /gazebo/model_states [gazebo_msgs/ModelStates]
        * /joint_states [sensor_msgs/JointState]
 
-  --------------------------------------------------------------------------------
 - Foot sensor
 `rosrun sim_assiants bumper_sensor_filter_node`
   > this is to run a node to filter contact information from bumper sensor message
