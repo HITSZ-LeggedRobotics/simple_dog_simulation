@@ -56,34 +56,46 @@ void FakePose::jointStatesCallback(const sensor_msgs::JointState::ConstPtr& join
   robot_state_.lf_leg_joints.header = joint_states->header;
   robot_state_.lf_leg_joints.name[0] = "front_left_1_joint";
   robot_state_.lf_leg_joints.position[0] = joint_states->position[0];
+  robot_state_.lf_leg_joints.effort[0] = joint_states->effort[0];
   robot_state_.lf_leg_joints.name[1] = "front_left_2_joint";
   robot_state_.lf_leg_joints.position[1] = joint_states->position[1];
+  robot_state_.lf_leg_joints.effort[1] = joint_states->effort[1];
   robot_state_.lf_leg_joints.name[2] = "front_left_3_joint";
   robot_state_.lf_leg_joints.position[2] = joint_states->position[2];
+  robot_state_.lf_leg_joints.effort[2] = joint_states->effort[2];
 
   robot_state_.rf_leg_joints.header = joint_states->header;
   robot_state_.rf_leg_joints.name[0] = "front_right_1_joint";
   robot_state_.rf_leg_joints.position[0] = joint_states->position[3];
+  robot_state_.rf_leg_joints.effort[0] = joint_states->effort[3];
   robot_state_.rf_leg_joints.name[1] = "front_right_2_joint";
   robot_state_.rf_leg_joints.position[1] = joint_states->position[4];
+  robot_state_.rf_leg_joints.effort[1] = joint_states->effort[4];
   robot_state_.rf_leg_joints.name[2] = "front_right_3_joint";
   robot_state_.rf_leg_joints.position[2] = joint_states->position[5];
+  robot_state_.rf_leg_joints.effort[2] = joint_states->effort[5];
 
   robot_state_.lh_leg_joints.header = joint_states->header;
   robot_state_.lh_leg_joints.name[0] = "rear_left_1_joint";
   robot_state_.lh_leg_joints.position[0] = joint_states->position[6];
+  robot_state_.lh_leg_joints.effort[0] = joint_states->effort[6];
   robot_state_.lh_leg_joints.name[1] = "rear_left_2_joint";
   robot_state_.lh_leg_joints.position[1] = joint_states->position[7];
+  robot_state_.lh_leg_joints.effort[1] = joint_states->effort[7];
   robot_state_.lh_leg_joints.name[2] = "rear_left_3_joint";
   robot_state_.lh_leg_joints.position[2] = joint_states->position[8];
+  robot_state_.lh_leg_joints.effort[2] = joint_states->effort[8];
 
   robot_state_.rh_leg_joints.header = joint_states->header;
   robot_state_.rh_leg_joints.name[0] = "rear_right_1_joint";
   robot_state_.rh_leg_joints.position[0] = joint_states->position[9];
+  robot_state_.rh_leg_joints.effort[0] = joint_states->effort[9];
   robot_state_.rh_leg_joints.name[1] = "rear_right_2_joint";
   robot_state_.rh_leg_joints.position[1] = joint_states->position[10];
+  robot_state_.rh_leg_joints.effort[1] = joint_states->effort[10];
   robot_state_.rh_leg_joints.name[2] = "rear_right_3_joint";
   robot_state_.rh_leg_joints.position[2] = joint_states->position[11];
+  robot_state_.rh_leg_joints.effort[2] = joint_states->effort[11];
 }
 
 void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& modelStatesMsg)
