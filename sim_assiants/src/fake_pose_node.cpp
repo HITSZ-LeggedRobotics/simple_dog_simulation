@@ -18,13 +18,12 @@ int main(int argc, char **argv)
 
     ROS_INFO("Hello world!");
 //    ros::Rate rate(50);
-//    while(ros::ok())
-//    {
-//        ros::spinOnce();
-//        rate.sleep();
-//    }
-    ros::AsyncSpinner spinner(1);
-    spinner.start();
-    ros::waitForShutdown();
+    while(ros::ok())
+    {
+        ros::spin();
+    }
+//    ros::AsyncSpinner spinner(1);
+//    spinner.start();
+//    ros::waitForShutdown();
     return 0;
 }

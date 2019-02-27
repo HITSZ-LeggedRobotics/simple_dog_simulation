@@ -7,7 +7,7 @@
 using namespace std;
 
 std_msgs::Float64 joint1,joint2,joint3,joint4,joint5,joint6,joint7,joint8,joint9,joint10,joint11,joint12;
-int resetFlag =0;
+int startFlag =0;
 void jointCommandCallback(const sensor_msgs::JointStateConstPtr& jointCommandMsg)
 {
     joint1.data = jointCommandMsg->position[0];
@@ -22,6 +22,7 @@ void jointCommandCallback(const sensor_msgs::JointStateConstPtr& jointCommandMsg
     joint10.data = jointCommandMsg->position[9];
     joint11.data = jointCommandMsg->position[10];
     joint12.data = jointCommandMsg->position[11];
+    startFlag = 1;
 //    ROS_INFO("Recieved a New Joint Command j1 = %f j2 = %f j3 = %f j4 = %f j5 = %f j6 = %f j7 = %f ",
 //             joint1.data,joint2.data,joint3.data,joint4.data,joint5.data,joint6.data,joint7.data);
 }
@@ -67,10 +68,10 @@ int main(int argc, char **argv)
     ROS_INFO("get Ready");
     while(ros::ok())
     {
-        // if(!resetFlag){
-        //     ROS_INFO("Wait For Reset");
-        // }
-        // else{
+        if(!startFlag){
+            ROS_INFO("Wait For Reset");
+        }
+        else{
             ROS_INFO("send joint command once");
             joint1ControllerCommandPub.publish(joint1);
             joint2ControllerCommandPub.publish(joint2);
@@ -85,7 +86,7 @@ int main(int argc, char **argv)
             joint11ControllerCommandPub.publish(joint11);
             joint12ControllerCommandPub.publish(joint12);
 
-        // }
+        }
 
         ros::spinOnce();
         rate.sleep();

@@ -14,7 +14,10 @@ find_package(catkin REQUIRED
     rospy
     geometry_msgs
     std_msgs
-    tf)
+    tf
+    free_gait_msgs
+    gazebo_msgs
+    )
 
 
 ## System dependencies are found with CMake's conventions
@@ -51,11 +54,10 @@ find_package(catkin REQUIRED
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+ add_message_files(
+   FILES
+   FootContact.msg
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -72,10 +74,11 @@ find_package(catkin REQUIRED
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+   geometry_msgs # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -116,6 +119,8 @@ catkin_package(
   geometry_msgs
   std_msgs
   tf
+  free_gait_msgs
+  gazebo_msgs
   DEPENDS
   Boost
 )
@@ -148,6 +153,7 @@ add_library(${PROJECT_NAME}_library
 # add_executable(${PROJECT_NAME}_node src/sim_assiants_node.cpp)
 add_executable(pose_pub_node src/fake_pose_node.cpp)
 add_executable(joint_states_to_gazebo_controllers_node src/joint_states_to_gazebo_controllers.cpp)
+add_executable(bumper_sensor_filter_node src/bumper_sensor_filter.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -162,6 +168,9 @@ add_executable(joint_states_to_gazebo_controllers_node src/joint_states_to_gazeb
  target_link_libraries(joint_states_to_gazebo_controllers_node
    ${catkin_LIBRARIES}
  )
+target_link_libraries(bumper_sensor_filter_node
+  ${catkin_LIBRARIES}
+  )
 target_link_libraries(${PROJECT_NAME}_library
     ${catkin_LIBRARIES})
 

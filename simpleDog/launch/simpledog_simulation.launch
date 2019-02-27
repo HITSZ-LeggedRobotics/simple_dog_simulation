@@ -32,6 +32,7 @@
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
+  <param name="/free_gait/robot_state" value="/gazebo/robot_states" />
 
   <param name="robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/simpledog.urdf.xacro'
   --inorder
@@ -62,6 +63,8 @@
 
 <!--get the real pose and tf from model states of gazebo-->
   <node pkg="sim_assiants" type="pose_pub_node" name="pose_pub_node"/>
+<!--get the contact information from bumper sensor -->
+  <node pkg="sim_assiants" type="bumper_sensor_filter_node" name="bumper_sensor_filter_node" />
 <!--get joint states and pub the robot tf-->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
