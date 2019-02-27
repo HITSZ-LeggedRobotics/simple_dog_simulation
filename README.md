@@ -19,16 +19,21 @@ source ~/.bashrc
   > this is to publish the absolute base_link pose in world(odom frame), and TF, and a customed RobotState message
 
   >Node [/pose_pub_node]
-  >>Publications:
+  >> - Publications:
        * /gazebo/robot_states [free_gait_msgs/RobotState]
+
        * /pose_pub_node/base_pose [geometry_msgs/PoseWithCovarianceStamped]
+
        * /rosout [rosgraph_msgs/Log]
+       
        * /tf [tf2_msgs/TFMessage]
 
 
   >>Subscriptions:
        * /clock [rosgraph_msgs/Clock]
+
        * /gazebo/model_states [gazebo_msgs/ModelStates]
+
        * /joint_states [sensor_msgs/JointState]
 
 - Foot sensor
@@ -38,19 +43,30 @@ source ~/.bashrc
   >Node [/bumper_sensor_filter_node]
   >>Publications:
       * /bumper_sensor_filter_node/lf_foot_contact [sim_assiants/FootContact]
+
       * /bumper_sensor_filter_node/lf_foot_force [geometry_msgs/WrenchStamped]
+
       * /bumper_sensor_filter_node/lh_foot_contact [sim_assiants/FootContact]
+
       * /bumper_sensor_filter_node/lh_foot_force [geometry_msgs/WrenchStamped]
+
       * /bumper_sensor_filter_node/rf_foot_contact [sim_assiants/FootContact]
+
       * /bumper_sensor_filter_node/rf_foot_force [geometry_msgs/WrenchStamped]
+
       * /bumper_sensor_filter_node/rh_foot_contact [sim_assiants/FootContact]
+
       * /bumper_sensor_filter_node/rh_foot_force [geometry_msgs/WrenchStamped]
 
     >>Subscriptions:
       * /clock [rosgraph_msgs/Clock]
+
       * /lf_foot_bumper [gazebo_msgs/ContactsState]
+
       * /lh_foot_bumper [gazebo_msgs/ContactsState]
+
       * /rf_foot_bumper [gazebo_msgs/ContactsState]
+
       * /rh_foot_bumper [gazebo_msgs/ContactsState]
 
 ### How to control the robot
