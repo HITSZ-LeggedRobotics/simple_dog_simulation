@@ -15,8 +15,9 @@
   </gazebo>
   <!--load the gazebo rosz-control plug in-->
   <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+    <plugin filename="librobot_state_gazebo_ros_control_plugin.so" name="balance_controller">
       <robotNamespace>/simpledog</robotNamespace>
+      <robotSimType>balance_controller/SimRobotStateHardwareInterface</robotSimType>
     </plugin>
   </gazebo>
   <!-- <gazebo reference="imu_link">
@@ -685,7 +686,6 @@
       <topicName>lh_foot_force_ground_truth</topicName>
     </plugin>
   </gazebo>
-  <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
   <link name="base_link">
     <inertial>
       <origin rpy="0 0 0" xyz="2.919E-17 -4.8141E-17 9.4163E-19"/>
@@ -735,7 +735,7 @@
     <parent link="base_link"/>
     <child link="front_left_1_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="front_left_2_Link">
     <inertial>
@@ -764,7 +764,7 @@
     <parent link="front_left_1_Link"/>
     <child link="front_left_2_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="front_left_3_Link">
     <inertial>
@@ -793,7 +793,7 @@
     <parent link="front_left_2_Link"/>
     <child link="front_left_3_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="lf_foot_Link">
     <inertial>
@@ -811,7 +811,6 @@
       </material>
     </visual>
     <collision>
-      <maxContacts>1</maxContacts>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://simpledog/meshes/lf_foot_Link.STL"/>
@@ -851,7 +850,7 @@
     <parent link="base_link"/>
     <child link="front_right_1_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="front_right_2_Link">
     <inertial>
@@ -880,7 +879,7 @@
     <parent link="front_right_1_Link"/>
     <child link="front_right_2_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="front_right_3_Link">
     <inertial>
@@ -909,7 +908,7 @@
     <parent link="front_right_2_Link"/>
     <child link="front_right_3_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="rf_foot_Link">
     <inertial>
@@ -966,7 +965,7 @@
     <parent link="base_link"/>
     <child link="rear_left_1_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="rear_left_2_Link">
     <inertial>
@@ -995,7 +994,7 @@
     <parent link="rear_left_1_Link"/>
     <child link="rear_left_2_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="rear_left_3_Link">
     <inertial>
@@ -1024,9 +1023,9 @@
     <parent link="rear_left_2_Link"/>
     <child link="rear_left_3_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
-  <link name="rh_foot_Link">
+  <link name="lh_foot_Link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.017825 -1.1102E-16 5.5511E-17"/>
       <mass value="0.055619"/>
@@ -1048,10 +1047,10 @@
       </geometry>
     </collision>
   </link>
-  <joint name="rh_foot_joint" type="fixed">
+  <joint name="lh_foot_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.24742286767759 0.000379574544590811 -0.015"/>
     <parent link="rear_left_3_Link"/>
-    <child link="rh_foot_Link"/>
+    <child link="lh_foot_Link"/>
     <axis xyz="0 0 0"/>
   </joint>
   <link name="rear_right_1_Link">
@@ -1081,7 +1080,7 @@
     <parent link="base_link"/>
     <child link="rear_right_1_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="rear_right_2_Link">
     <inertial>
@@ -1110,7 +1109,7 @@
     <parent link="rear_right_1_Link"/>
     <child link="rear_right_2_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
   <link name="rear_right_3_Link">
     <inertial>
@@ -1139,9 +1138,9 @@
     <parent link="rear_right_2_Link"/>
     <child link="rear_right_3_Link"/>
     <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-3.0" upper="3.0" velocity="10"/>
+    <limit effort="300" lower="-3.0" upper="3.0" velocity="10"/>
   </joint>
-  <link name="lh_foot_Link">
+  <link name="rh_foot_Link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.017825 -1.1102E-16 0"/>
       <mass value="0.055619"/>
@@ -1163,11 +1162,10 @@
       </geometry>
     </collision>
   </link>
-  <joint name="lh_foot_joint" type="fixed">
+  <joint name="rh_foot_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.24968 0.00033355 -0.015"/>
     <parent link="rear_right_3_Link"/>
-    <child link="lh_foot_Link"/>
+    <child link="rh_foot_Link"/>
     <axis xyz="0 0 0"/>
   </joint>
 </robot>
-

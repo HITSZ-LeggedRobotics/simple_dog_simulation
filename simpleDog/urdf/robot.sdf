@@ -191,7 +191,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -276,7 +276,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -416,7 +416,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -501,7 +501,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -586,7 +586,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -726,7 +726,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -811,7 +811,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -896,7 +896,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -954,7 +954,7 @@
           </friction>
         </surface>
       </collision>
-      <collision name='rear_left_3_Link_fixed_joint_lump__rh_foot_Link_collision_1'>
+      <collision name='rear_left_3_Link_fixed_joint_lump__lh_foot_Link_collision_1'>
         <pose frame=''>0.247423 0.00038 -0.015 0 -0 0</pose>
         <geometry>
           <mesh>
@@ -993,7 +993,7 @@
           </script>
         </material>
       </visual>
-      <visual name='rear_left_3_Link_fixed_joint_lump__rh_foot_Link_visual_1'>
+      <visual name='rear_left_3_Link_fixed_joint_lump__lh_foot_Link_visual_1'>
         <pose frame=''>0.247423 0.00038 -0.015 0 -0 0</pose>
         <geometry>
           <mesh>
@@ -1013,17 +1013,17 @@
       <gravity>0</gravity>
       <velocity_decay/>
       <self_collide>0</self_collide>
-      <sensor name='rh_foot_contact_sensor' type='contact'>
+      <sensor name='lh_foot_contact_sensor' type='contact'>
         <update_rate>100</update_rate>
         <contact>
-          <collision>rear_left_3_Link_fixed_joint_lump__rh_foot_Link_collision_1</collision>
+          <collision>rear_right_3_Link_fixed_joint_lump__lh_foot_Link_collision_1</collision>
           <topic>__default_topic__</topic>
         </contact>
-        <plugin name='rh_foot_gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
+        <plugin name='lh_foot_gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
           <alwaysOn>true</alwaysOn>
-          <frameName>rh_foot_Link</frameName>
+          <frameName>lh_foot_Link</frameName>
           <updateRate>100.0</updateRate>
-          <bumperTopicName>rh_foot_bumper</bumperTopicName>
+          <bumperTopicName>lh_foot_bumper</bumperTopicName>
         </plugin>
         <pose frame=''>0.247423 0.00038 -0.015 0 -0 0</pose>
       </sensor>
@@ -1036,7 +1036,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -1121,7 +1121,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -1206,7 +1206,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -1264,7 +1264,7 @@
           </friction>
         </surface>
       </collision>
-      <collision name='rear_right_3_Link_fixed_joint_lump__lh_foot_Link_collision_1'>
+      <collision name='rear_right_3_Link_fixed_joint_lump__rh_foot_Link_collision_1'>
         <pose frame=''>0.24968 0.000334 -0.015 0 -0 0</pose>
         <geometry>
           <mesh>
@@ -1303,7 +1303,7 @@
           </script>
         </material>
       </visual>
-      <visual name='rear_right_3_Link_fixed_joint_lump__lh_foot_Link_visual_1'>
+      <visual name='rear_right_3_Link_fixed_joint_lump__rh_foot_Link_visual_1'>
         <pose frame=''>0.24968 0.000334 -0.015 0 -0 0</pose>
         <geometry>
           <mesh>
@@ -1323,17 +1323,17 @@
       <gravity>0</gravity>
       <velocity_decay/>
       <self_collide>0</self_collide>
-      <sensor name='lh_foot_contact_sensor' type='contact'>
+      <sensor name='rh_foot_contact_sensor' type='contact'>
         <update_rate>100</update_rate>
         <contact>
-          <collision>rear_right_3_Link_fixed_joint_lump__lh_foot_Link_collision_1</collision>
+          <collision>rear_left_3_Link_fixed_joint_lump__rh_foot_Link_collision_1</collision>
           <topic>__default_topic__</topic>
         </contact>
-        <plugin name='lh_foot_gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
+        <plugin name='rh_foot_gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
           <alwaysOn>true</alwaysOn>
-          <frameName>lh_foot_Link</frameName>
+          <frameName>rh_foot_Link</frameName>
           <updateRate>100.0</updateRate>
-          <bumperTopicName>lh_foot_bumper</bumperTopicName>
+          <bumperTopicName>rh_foot_bumper</bumperTopicName>
         </plugin>
         <pose frame=''>0.24968 0.000334 -0.015 0 -0 0</pose>
       </sensor>
@@ -1346,7 +1346,7 @@
         <limit>
           <lower>-3</lower>
           <upper>3</upper>
-          <effort>100</effort>
+          <effort>300</effort>
           <velocity>10</velocity>
         </limit>
         <dynamics>
@@ -1366,8 +1366,9 @@
         </ode>
       </physics>
     </joint>
-    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+    <plugin name='balance_controller' filename='librobot_state_gazebo_ros_control_plugin.so'>
       <robotNamespace>/simpledog</robotNamespace>
+      <robotSimType>balance_controller/SimRobotStateHardwareInterface</robotSimType>
     </plugin>
     <plugin name='ft_sensor' filename='libgazebo_ros_ft_sensor.so'>
       <updateRate>100.0</updateRate>
@@ -1452,8 +1453,8 @@
       <updateRate>10.0</updateRate>
       <frameName>base_link</frameName>
       <topicName>rh_foot_force_ground_truth</topicName>
-      <bodyName>rear_left_3_Link</bodyName>
-      <xyzOffset>-0.247423 -0.000379575 0.015</xyzOffset>
+      <bodyName>rear_right_3_Link</bodyName>
+      <xyzOffset>-0.24968 -0.00033355 0.015</xyzOffset>
       <rpyOffset>0 -0 0</rpyOffset>
     </plugin>
     <static>0</static>
@@ -1462,8 +1463,8 @@
       <updateRate>10.0</updateRate>
       <frameName>base_link</frameName>
       <topicName>lh_foot_force_ground_truth</topicName>
-      <bodyName>rear_right_3_Link</bodyName>
-      <xyzOffset>-0.24968 -0.00033355 0.015</xyzOffset>
+      <bodyName>rear_left_3_Link</bodyName>
+      <xyzOffset>-0.247423 -0.000379575 0.015</xyzOffset>
       <rpyOffset>0 -0 0</rpyOffset>
     </plugin>
   </model>

@@ -7,6 +7,9 @@ Panels:
         - /Status1
         - /FreeGaitPreview1
         - /FreeGaitPreview1/Settings1
+        - /FreeGaitPreview1/Playback1
+        - /InteractiveMarkers1
+        - /RobotModel2
       Splitter Ratio: 0.5
     Tree Height: 565
   - Class: rviz/Selection
@@ -48,6 +51,72 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: false
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: false
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: false
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        {}
+      Update Interval: 0
+      Value: false
+    - Class: free_gait_rviz_plugin/FreeGaitPreview
+      Enabled: true
+      Name: FreeGaitPreview
+      Playback:
+        Playback Speed: 1
+        Time: 1.53600001
+      Settings:
+        Auto En/Disable Visuals: false
+        Auto Hide When: Reached End of Preview
+        Auto-Play: true
+        Feedback Topic: ""
+        Goal Topic: /free_gait/preview_topic
+        Preview Rate: 1000
+        Result Topic: ""
+        Robot Model: ""
+        Robot State Topic: /gazebo/robot_states
+        Start State: Continue Previewed State
+        TF Prefix: /preview
+      Value: true
+      Visuals:
+        End Effector Targets:
+          Color: 0; 0; 1
+          Value: true
+        End Effector Trajectories: true
+        Stances: true
+        Surface Normals: true
+        Value: true
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /free_gait_marker/update
       Value: true
     - Alpha: 1
       Class: rviz/RobotModel
@@ -155,50 +224,10 @@ Visualization Manager:
           Value: true
       Name: RobotModel
       Robot Description: robot_description
-      TF Prefix: ""
+      TF Prefix: /preview
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz/TF
-      Enabled: true
-      Frame Timeout: 15
-      Frames:
-        All Enabled: true
-      Marker Scale: 1
-      Name: TF
-      Show Arrows: true
-      Show Axes: true
-      Show Names: true
-      Tree:
-        {}
-      Update Interval: 0
-      Value: true
-    - Class: free_gait_rviz_plugin/FreeGaitPreview
-      Enabled: true
-      Name: FreeGaitPreview
-      Playback:
-        Playback Speed: 1
-      Settings:
-        Auto En/Disable Visuals: false
-        Auto Hide When: Reached End of Preview
-        Auto-Play: true
-        Feedback Topic: ""
-        Goal Topic: /free_gait/preview_topic
-        Preview Rate: 1000
-        Result Topic: ""
-        Robot Model: ""
-        Robot State Topic: ""
-        Start State: Continue Previewed State
-        TF Prefix: ""
-      Value: true
-      Visuals:
-        End Effector Targets:
-          Color: 0; 0; 1
-          Value: true
-        End Effector Trajectories: true
-        Stances: true
-        Surface Normals: true
-        Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -224,7 +253,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.45080876
+      Distance: 3.44320989
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -260,5 +289,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 60
-  Y: 26
+  X: 94
+  Y: 128

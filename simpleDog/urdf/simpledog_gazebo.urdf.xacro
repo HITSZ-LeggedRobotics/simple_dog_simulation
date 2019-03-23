@@ -17,8 +17,9 @@
 </gazebo>
 <!--load the gazebo rosz-control plug in-->
 <gazebo>
-  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+  <plugin name="balance_controller" filename="librobot_state_gazebo_ros_control_plugin.so">
     <robotNamespace>$(arg robot_namespace)</robotNamespace>
+    <robotSimType>balance_controller/SimRobotStateHardwareInterface</robotSimType>
   </plugin>
 </gazebo>
 <!-- <gazebo reference="imu_link">

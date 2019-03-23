@@ -4,12 +4,14 @@
 #include "boost/thread.hpp"
 #include "std_msgs/Bool.h"
 #include "sim_assiants/FootContact.h"
+#include "sim_assiants/FootContacts.h"
 
 class BumperSensorFilter{
 public:
   BumperSensorFilter(const ros::NodeHandle& node_handle)
     : node_handle_(node_handle)
   {
+    foot_contacts_.foot_contacts.resize(4);
     // subcribe to bumper msg
     lf_bumperSensorSub_ = node_handle_.subscribe("/lf_foot_bumper", 1, &BumperSensorFilter::leftFrontFootBumperCallback, this);
     rf_bumperSensorSub_ = node_handle_.subscribe("/rf_foot_bumper", 1, &BumperSensorFilter::rightFrontFootBumperCallback, this);
@@ -25,6 +27,7 @@ public:
     rf_footContactPub_ = node_handle_.advertise<sim_assiants::FootContact>("rf_foot_contact", 1);
     rh_footContactPub_ = node_handle_.advertise<sim_assiants::FootContact>("rh_foot_contact", 1);
     lh_footContactPub_ = node_handle_.advertise<sim_assiants::FootContact>("lh_foot_contact", 1);
+    footContactsPub_ = node_handle_.advertise<sim_assiants::FootContacts>("foot_contacts", 1);
     // publish thread ON
     wrenchPublishThread_ = boost::thread(boost::bind(&BumperSensorFilter::wrenchPublishThreadFunction, this));
   }
@@ -57,6 +60,7 @@ private:
       }
     lf_foot_contact_.contact_force.header = lf_wrench_.header;
     lf_foot_contact_.contact_force.wrench = lf_wrench_.wrench;
+    foot_contacts_.foot_contacts[0] = lf_foot_contact_;
 
   }
 
@@ -84,6 +88,7 @@ private:
         rf_foot_contact_.is_contact = false;
       }
     rf_foot_contact_.contact_force = rf_wrench_;
+    foot_contacts_.foot_contacts[1] = rf_foot_contact_;
 
   }
   void leftHindFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
@@ -110,7 +115,7 @@ private:
         rh_foot_contact_.is_contact = false;
       }
     rh_foot_contact_.contact_force = rh_wrench_;
-
+    foot_contacts_.foot_contacts[2] = rh_foot_contact_;
   }
   void rightHindFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
   {
@@ -123,7 +128,7 @@ private:
         lh_foot_contact_.is_contact = true;
         lh_foot_contact_.surface_normal.vector = contact_state->states[0].contact_normals[0];
         lh_foot_contact_.contact_position.vector = contact_state->states[0].contact_positions[0];
-        rh_foot_contact_.contact_position.header.frame_id = "odom";
+        lh_foot_contact_.contact_position.header.frame_id = "odom";
 
           } else{
         lh_wrench_.wrench.force.x = 0.0;
@@ -136,7 +141,7 @@ private:
         lh_foot_contact_.is_contact = false;
       }
     lh_foot_contact_.contact_force = lh_wrench_;
-
+    foot_contacts_.foot_contacts[3] = lh_foot_contact_;
   }
   /**
    * @brief wrenchPublishThreadFunction
@@ -152,10 +157,11 @@ private:
         rh_footContactForcePub_.publish(rh_wrench_);
         lh_footContactForcePub_.publish(lh_wrench_);
 
-        lf_footContactPub_.publish(lf_foot_contact_);
-        rf_footContactPub_.publish(rf_foot_contact_);
-        rh_footContactPub_.publish(rh_foot_contact_);
-        lh_footContactPub_.publish(lh_foot_contact_);
+//        lf_footContactPub_.publish(lf_foot_contact_);
+//        rf_footContactPub_.publish(rf_foot_contact_);
+//        rh_footContactPub_.publish(rh_foot_contact_);
+//        lh_footContactPub_.publish(lh_foot_contact_);
+        footContactsPub_.publish(foot_contacts_);
 
         lock.unlock();
         rate.sleep();
@@ -178,6 +184,7 @@ private:
    * @brief lf_footContactPub_
    */
   ros::Publisher lf_footContactPub_, rf_footContactPub_, rh_footContactPub_, lh_footContactPub_;
+  ros::Publisher footContactsPub_;
   /**
    * @brief lf_wrench_
    */
@@ -186,7 +193,7 @@ private:
    * @brief lf_foot_contact_
    */
   sim_assiants::FootContact lf_foot_contact_, rf_foot_contact_, rh_foot_contact_, lh_foot_contact_;
-
+  sim_assiants::FootContacts foot_contacts_;
   /**
    * @brief wrenchPublishThread_
    */

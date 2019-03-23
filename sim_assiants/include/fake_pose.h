@@ -9,6 +9,7 @@
 #include "message_filters/subscriber.h"
 #include "message_filters/time_sequencer.h"
 #include "free_gait_msgs/RobotState.h"
+#include "sim_assiants/FootContacts.h"
 
 namespace fake_pose {
 
@@ -34,6 +35,8 @@ public:
     void modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& modelStatesMsg);
 
     void jointStatesCallback(const sensor_msgs::JointState::ConstPtr& joint_states);
+
+    void footContactsCallback(const sim_assiants::FootContacts::ConstPtr& foot_contacts);
 private:
     //! subscribe loop thread
     void modelStatesSubLoopThread();
@@ -42,7 +45,7 @@ private:
     ros::NodeHandle& nodeHandle_;
 
     //! ROS subscriber
-    ros::Subscriber modelStatesSub_, gazebo_joint_states_sub_;
+    ros::Subscriber modelStatesSub_, gazebo_joint_states_sub_, footContactsSub_;
 
     //! message filter subscriber
     //message_filters::Subscriber<gazebo_msgs::ModelStates> timeSeqSub_;
