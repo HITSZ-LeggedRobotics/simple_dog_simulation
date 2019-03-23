@@ -34,8 +34,8 @@
 
 <xacro:simpledog_foot_sensors foot_prefix="lf_foot" joint_prefix="front_left_3_"> </xacro:simpledog_foot_sensors>
 <xacro:simpledog_foot_sensors foot_prefix="rf_foot" joint_prefix="front_right_3_"> </xacro:simpledog_foot_sensors>
-<xacro:simpledog_foot_sensors foot_prefix="rh_foot" joint_prefix="rear_left_3_"> </xacro:simpledog_foot_sensors>
-<xacro:simpledog_foot_sensors foot_prefix="lh_foot" joint_prefix="rear_right_3_"> </xacro:simpledog_foot_sensors>
+<xacro:simpledog_foot_sensors foot_prefix="rh_foot" joint_prefix="rear_right_3_"> </xacro:simpledog_foot_sensors>
+<xacro:simpledog_foot_sensors foot_prefix="lh_foot" joint_prefix="rear_left_3_"> </xacro:simpledog_foot_sensors>
 
 
 <link
@@ -45,7 +45,7 @@
         xyz="2.919E-17 -4.8141E-17 9.4163E-19"
         rpy="0 0 0" />
       <mass
-        value="15.238" />
+        value="22.5" />
       <inertia
         ixx="0.74932"
         ixy="-1.2062E-17"
@@ -131,7 +131,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -189,7 +189,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -247,7 +247,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -358,7 +358,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -416,7 +416,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -474,7 +474,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -585,7 +585,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -643,7 +643,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -701,13 +701,13 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
   </joint>
   <link
-    name="rh_foot_Link">
+    name="lh_foot_Link">
     <inertial>
       <origin
         xyz="0.017825 -1.1102E-16 5.5511E-17"
@@ -747,7 +747,7 @@
     </collision>
   </link>
   <joint
-    name="rh_foot_joint"
+    name="lh_foot_joint"
     type="fixed">
     <origin
       xyz="0.24742286767759 0.000379574544590811 -0.015"
@@ -755,7 +755,7 @@
     <parent
       link="rear_left_3_Link" />
     <child
-      link="rh_foot_Link" />
+      link="lh_foot_Link" />
     <axis
       xyz="0 0 0" />
   </joint>
@@ -812,7 +812,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -870,7 +870,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -928,13 +928,13 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="100"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
   </joint>
   <link
-    name="lh_foot_Link">
+    name="rh_foot_Link">
     <inertial>
       <origin
         xyz="0.017825 -1.1102E-16 0"
@@ -974,7 +974,7 @@
     </collision>
   </link>
   <joint
-    name="lh_foot_joint"
+    name="rh_foot_joint"
     type="fixed">
     <origin
       xyz="0.24968 0.00033355 -0.015"
@@ -982,7 +982,7 @@
     <parent
       link="rear_right_3_Link" />
     <child
-      link="lh_foot_Link" />
+      link="rh_foot_Link" />
     <axis
       xyz="0 0 0" />
   </joint>

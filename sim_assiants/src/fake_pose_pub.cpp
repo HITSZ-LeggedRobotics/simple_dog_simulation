@@ -18,6 +18,7 @@ FakePose::FakePose(ros::NodeHandle& nodehandle)
     ROS_INFO("constructing.....");
     modelStatesSub_ = nodeHandle_.subscribe("/gazebo/model_states", 1, &FakePose::modelStatesCallback, this);
     gazebo_joint_states_sub_ = nodeHandle_.subscribe("/joint_states", 1, &FakePose::jointStatesCallback, this);
+    footContactsSub_ = nodeHandle_.subscribe("foot_contacts", 1, &FakePose::footContactsCallback, this);
     fakePosePub_ = nodeHandle_.advertise<geometry_msgs::PoseWithCovarianceStamped>("base_pose", 1);
     robot_state_pub_ = nodeHandle_.advertise<free_gait_msgs::RobotState>("/gazebo/robot_states", 1);
 
@@ -96,6 +97,25 @@ void FakePose::jointStatesCallback(const sensor_msgs::JointState::ConstPtr& join
   robot_state_.rh_leg_joints.name[2] = "rear_right_3_joint";
   robot_state_.rh_leg_joints.position[2] = joint_states->position[11];
   robot_state_.rh_leg_joints.effort[2] = joint_states->effort[11];
+}
+
+void FakePose::footContactsCallback(const sim_assiants::FootContacts::ConstPtr& foot_contacts)
+{
+  robot_state_.lf_leg_mode.support_leg = foot_contacts->foot_contacts[0].is_contact;
+  robot_state_.lf_leg_mode.name = foot_contacts->foot_contacts[0].name;
+  robot_state_.lf_leg_mode.surface_normal = foot_contacts->foot_contacts[0].surface_normal;
+
+  robot_state_.rf_leg_mode.support_leg = foot_contacts->foot_contacts[1].is_contact;
+  robot_state_.rf_leg_mode.name = foot_contacts->foot_contacts[1].name;
+  robot_state_.rf_leg_mode.surface_normal = foot_contacts->foot_contacts[1].surface_normal;
+
+  robot_state_.rh_leg_mode.support_leg = foot_contacts->foot_contacts[2].is_contact;
+  robot_state_.rh_leg_mode.name = foot_contacts->foot_contacts[2].name;
+  robot_state_.rh_leg_mode.surface_normal = foot_contacts->foot_contacts[2].surface_normal;
+
+  robot_state_.lh_leg_mode.support_leg = foot_contacts->foot_contacts[3].is_contact;
+  robot_state_.lh_leg_mode.name = foot_contacts->foot_contacts[3].name;
+  robot_state_.lh_leg_mode.surface_normal = foot_contacts->foot_contacts[3].surface_normal;
 }
 
 void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& modelStatesMsg)
