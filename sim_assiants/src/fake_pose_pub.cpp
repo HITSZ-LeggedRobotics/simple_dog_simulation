@@ -18,7 +18,7 @@ FakePose::FakePose(ros::NodeHandle& nodehandle)
     ROS_INFO("constructing.....");
     modelStatesSub_ = nodeHandle_.subscribe("/gazebo/model_states", 1, &FakePose::modelStatesCallback, this);
     gazebo_joint_states_sub_ = nodeHandle_.subscribe("/joint_states", 1, &FakePose::jointStatesCallback, this);
-    footContactsSub_ = nodeHandle_.subscribe("foot_contacts", 1, &FakePose::footContactsCallback, this);
+    footContactsSub_ = nodeHandle_.subscribe("/bumper_sensor_filter_node/foot_contacts", 1, &FakePose::footContactsCallback, this);
     fakePosePub_ = nodeHandle_.advertise<geometry_msgs::PoseWithCovarianceStamped>("base_pose", 1);
     robot_state_pub_ = nodeHandle_.advertise<free_gait_msgs::RobotState>("/gazebo/robot_states", 1);
 
