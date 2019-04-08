@@ -27,7 +27,7 @@
     <arg name="world_name" value="$(find simpledog)/worlds/simpledog_terrian.world"/>
     <!--<arg name="world_name" value="worlds/empty.world"/>-->
     <arg name="paused" value="false"/>
-    <arg name="use_sim_time" value="true"/>
+    <arg name="use_sim_time" value="false"/>
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
@@ -61,8 +61,9 @@
             rear_left_1_joint_position_controller
             rear_left_2_joint_position_controller
             rear_left_3_joint_position_controller"/> -->
+<rosparam file="$(find balance_controller)/config/controller_gains.yaml" command="load" />
 <node name="base_controller_spawner_stopped" pkg="controller_manager" type="spawner"
-      args="--stopped balance_controller" />
+      args="--stopped base_balance_controller" />
 
 <!--get the real pose and tf from model states of gazebo-->
   <node pkg="sim_assiants" type="pose_pub_node" name="pose_pub_node"/>

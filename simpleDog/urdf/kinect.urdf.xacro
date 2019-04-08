@@ -35,7 +35,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <link name="${prefix}_link">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass
-        value="5.238" />
+        value="1.238" />
       <visual>
         <origin xyz="0 0 0" rpy="0 0 1.5708"/>
         <geometry>

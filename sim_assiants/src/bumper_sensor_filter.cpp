@@ -93,7 +93,7 @@ private:
     foot_contacts_.foot_contacts[1] = rf_foot_contact_;
 
   }
-  void leftHindFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
+  void rightHindFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
   {
     rh_wrench_.header.frame_id = "rh_foot_Link";
     if(!contact_state->states.empty())
@@ -120,7 +120,7 @@ private:
     rh_foot_contact_.contact_force = rh_wrench_;
     foot_contacts_.foot_contacts[2] = rh_foot_contact_;
   }
-  void rightHindFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
+  void leftHindFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
   {
     lh_wrench_.header.frame_id = "lh_foot_Link";
     if(!contact_state->states.empty())
