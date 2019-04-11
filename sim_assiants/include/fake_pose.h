@@ -10,6 +10,8 @@
 #include "message_filters/time_sequencer.h"
 #include "free_gait_msgs/RobotState.h"
 #include "sim_assiants/FootContacts.h"
+#include "eigen3/Eigen/Geometry"
+#include "eigen3/Eigen/Core"
 
 namespace fake_pose {
 
@@ -66,8 +68,9 @@ private:
 
     boost::recursive_mutex r_mutex_;
 
-    tf::Transform odom2base;
+    tf::Transform odom2base, odom_to_footprint, footprint_to_base;
     tf::Quaternion q;
+    ros::Time gazebo_time;
 
 };
 

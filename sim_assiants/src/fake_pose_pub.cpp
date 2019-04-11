@@ -54,6 +54,7 @@ FakePose::~FakePose(){};
 
 void FakePose::jointStatesCallback(const sensor_msgs::JointState::ConstPtr& joint_states)
 {
+  gazebo_time = joint_states->header.stamp;
   robot_state_.lf_leg_joints.header = joint_states->header;
   robot_state_.lf_leg_joints.name[0] = "front_left_1_joint";
   robot_state_.lf_leg_joints.position[0] = joint_states->position[0];
@@ -135,9 +136,19 @@ void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& mod
     q.setZ(modelStatesMsg->pose[9].orientation.z);
     odom2base.setRotation(q);
 
+    double yaw, pitch, roll;
+    tf::Matrix3x3(q).getRPY(roll, pitch, yaw);
+    odom_to_footprint.setRotation(tf::createQuaternionFromYaw(yaw));
+    footprint_to_base.setRotation(tf::createQuaternionFromRPY(roll, pitch, 0.0));
+
     odom2base.setOrigin(tf::Vector3(modelStatesMsg->pose[9].position.x,
                                     modelStatesMsg->pose[9].position.y,
                                     modelStatesMsg->pose[9].position.z));
+    odom_to_footprint.setOrigin(tf::Vector3(modelStatesMsg->pose[9].position.x,
+                                modelStatesMsg->pose[9].position.y,
+                                0));
+    footprint_to_base.setOrigin(tf::Vector3(0,0,modelStatesMsg->pose[9].position.z));
+
 //    tfBoardcaster_.sendTransform(tf::StampedTransform(odom2base, ros::Time::now(), "/odom", "/base_link"));
 
 
@@ -153,7 +164,9 @@ void FakePose::modelStatesSubLoopThread()
     {
         boost::recursive_mutex::scoped_lock lock(r_mutex_);
         robot_state_pub_.publish(robot_state_);
-        tfBoardcaster_.sendTransform(tf::StampedTransform(odom2base, ros::Time::now(), "/odom", "/base_link"));
+//        tfBoardcaster_.sendTransform(tf::StampedTransform(odom2base, ros::Time::now(), "/odom", "/base_link"));
+        tfBoardcaster_.sendTransform(tf::StampedTransform(odom_to_footprint, gazebo_time, "/odom", "/foot_print"));
+        tfBoardcaster_.sendTransform(tf::StampedTransform(footprint_to_base, gazebo_time, "/foot_print", "/base_link"));
         fakePosePub_.publish(fakePoseMsg_);
         lock.unlock();
         ROS_INFO("in test thread");

@@ -135,6 +135,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="front_left_2_Link">
@@ -193,6 +194,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="front_left_3_Link">
@@ -251,6 +253,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="lf_foot_Link">
@@ -362,6 +365,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="front_right_2_Link">
@@ -420,6 +424,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="front_right_3_Link">
@@ -478,6 +483,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="rf_foot_Link">
@@ -589,6 +595,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="rear_left_2_Link">
@@ -647,6 +654,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="rear_left_3_Link">
@@ -705,6 +713,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="lh_foot_Link">
@@ -816,6 +825,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="rear_right_2_Link">
@@ -874,6 +884,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="rear_right_3_Link">
@@ -932,6 +943,7 @@
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
+      <dynamics damping="0.7"/>
   </joint>
   <link
     name="rh_foot_Link">

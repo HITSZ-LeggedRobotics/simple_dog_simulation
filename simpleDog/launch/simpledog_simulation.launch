@@ -72,7 +72,10 @@
 
   <node pkg="sim_assiants" type="joint_states_to_gazebo_controllers_node" name="joint_states_to_gazebo_controllers_node"/>
 <!--get joint states and pub the robot tf-->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  <param name="publish_frequency" type="double" value="50.0" />
+  <param name="ignore_timestamp" type="bool" value="false" />
+</node>
 
 <!-- Spawn robot in gazebo (the world file has already include the robot)-->
 <!--<node name="spawn_simpledog_model" pkg="gazebo_ros" type="spawn_model"
