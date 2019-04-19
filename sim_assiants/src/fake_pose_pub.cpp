@@ -122,18 +122,22 @@ void FakePose::footContactsCallback(const sim_assiants::FootContacts::ConstPtr& 
 void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& modelStatesMsg)
 {
     ROS_INFO("Recieved a model states");
-    fakePoseMsg_.pose.pose = modelStatesMsg->pose[9];
+//    geometry_msgs::Pose base_pose = *(modelStatesMsg->pose.end());
+//    geometry_msgs::Twist base_twist =*(modelStatesMsg->twist.end());
+      geometry_msgs::Pose base_pose = modelStatesMsg->pose[10];
+      geometry_msgs::Twist base_twist =modelStatesMsg->twist[10];
+    fakePoseMsg_.pose.pose = base_pose;
     robot_state_.base_pose.pose = fakePoseMsg_.pose;
     robot_state_.base_pose.child_frame_id = "/base_link";
-    robot_state_.base_pose.twist.twist = modelStatesMsg->twist[9];
+    robot_state_.base_pose.twist.twist = base_twist;
     robot_state_.base_pose.header.frame_id = "/odom";
 
 //    tf::Transform odom2base;
 //    tf::Quaternion q;
-    q.setW(modelStatesMsg->pose[9].orientation.w);
-    q.setX(modelStatesMsg->pose[9].orientation.x);
-    q.setY(modelStatesMsg->pose[9].orientation.y);
-    q.setZ(modelStatesMsg->pose[9].orientation.z);
+    q.setW(base_pose.orientation.w);
+    q.setX(base_pose.orientation.x);
+    q.setY(base_pose.orientation.y);
+    q.setZ(base_pose.orientation.z);
     odom2base.setRotation(q);
 
     double yaw, pitch, roll;
@@ -141,13 +145,13 @@ void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& mod
     odom_to_footprint.setRotation(tf::createQuaternionFromYaw(yaw));
     footprint_to_base.setRotation(tf::createQuaternionFromRPY(roll, pitch, 0.0));
 
-    odom2base.setOrigin(tf::Vector3(modelStatesMsg->pose[9].position.x,
-                                    modelStatesMsg->pose[9].position.y,
-                                    modelStatesMsg->pose[9].position.z));
-    odom_to_footprint.setOrigin(tf::Vector3(modelStatesMsg->pose[9].position.x,
-                                modelStatesMsg->pose[9].position.y,
+    odom2base.setOrigin(tf::Vector3(base_pose.position.x,
+                                    base_pose.position.y,
+                                    base_pose.position.z));
+    odom_to_footprint.setOrigin(tf::Vector3(base_pose.position.x,
+                                base_pose.position.y,
                                 0));
-    footprint_to_base.setOrigin(tf::Vector3(0,0,modelStatesMsg->pose[9].position.z));
+    footprint_to_base.setOrigin(tf::Vector3(0,0,base_pose.position.z));
 
 //    tfBoardcaster_.sendTransform(tf::StampedTransform(odom2base, ros::Time::now(), "/odom", "/base_link"));
 

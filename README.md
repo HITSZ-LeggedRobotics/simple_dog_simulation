@@ -14,6 +14,7 @@ source ~/.bashrc
 `roslaunch simpledog simpledog_display.launch`
 - Launch in a world with some obstacles
 `roslaunch simpledog simple_dog_simulation.launch`
+**Attention:** open the test_terrain.world and search for `<model name='test_terrian_slope_and_stairs'>`, replace the STL model uri with you computer uri
 - Pose Publisher
 `rosrun sim_assiants pose_pub_node`
   > this is to publish the absolute base_link pose in world(odom frame), and TF, and a customed RobotState message
@@ -25,7 +26,7 @@ source ~/.bashrc
        * /pose_pub_node/base_pose [geometry_msgs/PoseWithCovarianceStamped]
 
        * /rosout [rosgraph_msgs/Log]
-       
+
        * /tf [tf2_msgs/TFMessage]
 
 
