@@ -42,8 +42,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
           <gazebo reference="${foot_prefix}_Link">
               <turnGravityOff>true</turnGravityOff>
               <selfCollide>false</selfCollide>
+              <maxContacts>1</maxContacts>
               <sensor type="contact" name="${foot_prefix}_contact_sensor">
-                <update_rate>100.0</update_rate>
+                <update_rate>1000.0</update_rate>
                 <contact>
                   <collision>${joint_prefix}Link_fixed_joint_lump__${foot_prefix}_Link_collision_1</collision>
                 </contact>
@@ -51,7 +52,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                   <alwaysOn>true</alwaysOn>
                   <frameName>${foot_prefix}_Link</frameName>
                   <!-- <frameName>world</frameName> -->
-                  <updateRate>100.0</updateRate>
+                  <updateRate>1000.0</updateRate>
                   <bumperTopicName>${foot_prefix}_bumper</bumperTopicName>
                 </plugin>
               </sensor>

@@ -12,7 +12,7 @@
 <xacro:if value="$(arg kinect_enabled)">
   <xacro:kinect_camera prefix="camera" robot_namespace="$(arg robot_namespace)"/>
   <joint name="kinect_frame_joint" type="fixed">
-    <origin xyz="0.3 0 0.1" rpy="0 0.18 0" />
+    <origin xyz="0.37 0 0.0" rpy="0 0.8 0" />
     <parent link="base_link"/>
     <child link="camera_link"/>
   </joint>
@@ -179,7 +179,7 @@
   </link>
   <joint
     name="front_left_2_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0 0 0"
       rpy="-1.5708 0 0" />
@@ -238,7 +238,7 @@
   </link>
   <joint
     name="front_left_3_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0.250069171339977 0.000334332414087979 0.11441948932032"
       rpy="0 0 0" />
@@ -409,7 +409,7 @@
   </link>
   <joint
     name="front_right_2_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0 0 0"
       rpy="-1.5708 0 0" />
@@ -468,7 +468,7 @@
   </link>
   <joint
     name="front_right_3_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0.249999996334044 0 0.114419764295838"
       rpy="0 0 0" />
@@ -639,7 +639,7 @@
   </link>
   <joint
     name="rear_left_2_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0 0 0"
       rpy="-1.5707963267949 0 0" />
@@ -698,7 +698,7 @@
   </link>
   <joint
     name="rear_left_3_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0.25 0 0.114419756285561"
       rpy="0 0 0" />
@@ -869,7 +869,7 @@
   </link>
   <joint
     name="rear_right_2_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0 0 0"
       rpy="-1.5708 0 0" />
@@ -928,7 +928,7 @@
   </link>
   <joint
     name="rear_right_3_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0.25010358767993 0.0001008844556592 0.114420076111023"
       rpy="0 0 0" />

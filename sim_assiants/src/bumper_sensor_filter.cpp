@@ -152,14 +152,14 @@ private:
    */
   void wrenchPublishThreadFunction()
   {
-    ros::Rate rate(50);
+    ros::Rate rate(400);
     while (ros::ok()) {
         // lock thread for data safe
         boost::recursive_mutex::scoped_lock lock(r_mutex_);
-        lf_footContactForcePub_.publish(lf_wrench_);
-        rf_footContactForcePub_.publish(rf_wrench_);
-        rh_footContactForcePub_.publish(rh_wrench_);
-        lh_footContactForcePub_.publish(lh_wrench_);
+        // lf_footContactForcePub_.publish(lf_wrench_);
+        // rf_footContactForcePub_.publish(rf_wrench_);
+        // rh_footContactForcePub_.publish(rh_wrench_);
+        // lh_footContactForcePub_.publish(lh_wrench_);
 
 //        lf_footContactPub_.publish(lf_foot_contact_);
 //        rf_footContactPub_.publish(rf_foot_contact_);
