@@ -51,9 +51,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                                 <mechanicalReduction>1</mechanicalReduction>
                         </actuator>
                         <joint name="${joint_prefix}joint">
-                                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-                                <!-- <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> -->
-                                <!-- <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface> -->
+                          <!-- <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface> -->
+                          <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                          <!-- <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface> -->
                         </joint>
                 </transmission>
 

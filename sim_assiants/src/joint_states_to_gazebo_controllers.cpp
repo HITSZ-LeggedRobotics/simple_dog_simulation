@@ -54,7 +54,7 @@ int main(int argc, char **argv)
     joint_group_positions.data[10] = -1.4;
     joint_group_positions.data[11] = 2.75;
     ros::Subscriber jointCommandSub = nh.subscribe("/action_server_test_node/all_joint_position", 1, jointCommandCallback);
-    ros::Publisher joint_group_position_pub = nh.advertise<std_msgs::Float64MultiArray>("/all_joints_position_group_controller/command",1);
+    ros::Publisher joint_group_position_pub = nh.advertise<std_msgs::Float64MultiArray>("/all_joints_position_effort_group_controller/command",1);
     //    ros::Subscriber resetCommandSub = nh.subscribe("/reset_flag",1,resetCommandCallback);
 //    ros::Publisher joint1ControllerCommandPub =
 //            nh.advertise<std_msgs::Float64>("front_left_1_joint_position_controller/command",1);
