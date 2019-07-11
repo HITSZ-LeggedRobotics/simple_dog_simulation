@@ -34,9 +34,9 @@
   </include>
   <param name="/free_gait/robot_state" value="/gazebo/robot_states" />
 
-  <param name="/real_time_factor" value="0.55" />
+  <param name="/real_time_factor" value="0.30" />
 
-  <param name="robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/simpledog.urdf.xacro'
+  <param name="robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/quadruped_model.urdf.xacro'
   --inorder
   robot_namespace:=$(arg robot_namespace)
   kinect_enabled:=$(arg kinect_enabled)"/>
