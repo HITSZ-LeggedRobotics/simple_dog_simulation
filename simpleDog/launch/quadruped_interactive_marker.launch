@@ -6,6 +6,11 @@
     default="True" />
   <arg name="kinect_enabled" default="true"/>
   <arg name="robot_namespace" default="/"/>
+
+  <include file="$(find free_gait_ros)/launch/test.launch"/>
+  <param name="/free_gait/robot_state" value="/gazebo/robot_states" />
+
+  <param name="/real_time_factor" value="0.30" />
   <!-- <param
     name="robot_description"
     textfile="$(find simpledog)/urdf/quadruped_model.urdf" /> -->
@@ -42,6 +47,6 @@
       name="rviz"
       pkg="rviz"
       type="rviz"
-      args="-d $(find simpledog)/urdf.rviz"
+      args="-d $(find simpledog)/config/quadruped_interactive_marker.rviz"
       output="screen"/>
 </launch>
