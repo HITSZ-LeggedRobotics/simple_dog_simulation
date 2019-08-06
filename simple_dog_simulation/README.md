@@ -1,7 +1,14 @@
 # simple_dog_simulation
 A simulation four leg robot simulation with gazebo
-**TODO(Shunyao): add a foot contact sensor**
+
+**modify by YaoChen-2019.8.5**
+- modify the foot_Sensor message with 0/1, just for judeg;
+- modify the tf/topic which related to their name;
+- modify the gazebo/odom with the form of Odometry for compare;
+
+
 ## Build
+
 ```
 cd your_catkin_ws/src
 catkin_make
@@ -16,7 +23,7 @@ For the REAL quadruped
 `roslaunch simpledog quadruped_display.launch`
 - Launch interactive maker to send control target of leg
 `roslaunch simpledog quadruped_interactive_marker.launch`
-TODO Usage
+
 - Launch in a world with some obstacles
 `roslaunch simpledog simpledog_simulation.launch`
 **Attention:** open the test_terrain.world and search for `<model name='test_terrian_slope_and_stairs'>`, replace the STL model uri with you computer uri
