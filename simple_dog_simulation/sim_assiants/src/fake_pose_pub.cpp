@@ -150,8 +150,8 @@ void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& mod
     gazeboPoseMsg.twist.twist = base_twist;
     gazeboPoseMsg.header.frame_id = "/gazebo_odom";
     gazeboPoseMsg.child_frame_id = "/gazebo_baselink";
-//    tf::Transform odom2base;
-//    tf::Quaternion q;
+
+
     q.setW(base_pose.orientation.w);
     q.setX(base_pose.orientation.x);
     q.setY(base_pose.orientation.y);
@@ -186,7 +186,7 @@ void FakePose::modelStatesSubLoopThread()
         boost::recursive_mutex::scoped_lock lock(r_mutex_);
         robot_state_pub_.publish(robot_state_);
 //        tfBoardcaster_.sendTransform(tf::StampedTransform(odom2base, ros::Time::now(), "/odom", "/base_link"));
-        // gazebo_time = ros::Time::now();
+
         tfBoardcaster_.sendTransform(tf::StampedTransform(odom_to_footprint, gazebo_time, "/odom", "/foot_print"));
         tfBoardcaster_.sendTransform(tf::StampedTransform(footprint_to_base, gazebo_time, "foot_print","/base_link"));
         fakePosePub_.publish(fakePoseMsg_);
@@ -197,7 +197,7 @@ void FakePose::modelStatesSubLoopThread()
         rate.sleep();
 //        ros::spinOnce();
 //        rate.sleep();
-        //ros::getGlobalCallbackQueue()->callAvailable(ros::WallDuration(timeout));
+
     }
 }
 
