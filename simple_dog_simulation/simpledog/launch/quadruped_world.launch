@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="world_name" default="worlds/empty.world"/>
+
+  <arg name="laser_enabled" default="true"/>
+  <arg name="kinect_enabled" default="true"/>
+  <arg name="robot_namespace" default="/"/>
+
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0.5"/>
+  <arg name="yaw" default="0"/>
+
+<node name="spawn_simpledog_model" pkg="gazebo_ros" type="spawn_model"
+    args="-x $(arg x)
+    -y $(arg y)
+    -z $(arg z)
+    -Y $(arg yaw)
+    -pause
+    -urdf
+    -param robot_description
+    -model $(arg robot_namespace)" />
+
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/empty.world"/>
+    <!-- <arg name="world_name" value="$(find simpledog)/worlds/test_terrain.world"/> -->
+    <!-- <arg name="world_name" value="$(find quadruped_slam_nav)/worlds/cloister.world"/>     -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="false"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  <param name="/free_gait/robot_state" value="/gazebo/robot_states" />
+
+  <param name="/real_time_factor" value="0.30" />
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/quadruped_model.urdf.xacro'
+  --inorder
+  robot_namespace:=$(arg robot_namespace)
+  kinect_enabled:=$(arg kinect_enabled)"/>
+  <!--<param name="robot_description" textfile="$(find simpledog)/urdf/simpledog.urdf.xacro"/>-->
+
+  <!--<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />-->
+
+<!-- Load controller configuration -->
+<rosparam command="load" file="$(find simpledog)/config/control.yaml" />
+<!-- <rosparam command="load" file="$(find simpledog)/config/joint_names_simpleDog.yaml" /> -->
+<!-- Spawn controllers -->
+<node name="base_controller_spawner" pkg="controller_manager" type="spawner"
+      args="simpledog_joint_publisher
+            all_joints_position_effort_group_controller" />
+            <!-- front_left_1_joint_position_controller
+            front_left_2_joint_position_controller
+            front_left_3_joint_position_controller
+            front_right_1_joint_position_controller
+            front_right_2_joint_position_controller
+            front_right_3_joint_position_controller
+            rear_right_1_joint_position_controller
+            rear_right_2_joint_position_controller
+            rear_right_3_joint_position_controller
+            rear_left_1_joint_position_controller
+            rear_left_2_joint_position_controller
+            rear_left_3_joint_position_controller"/> -->
+<rosparam file="$(find balance_controller)/config/controller_gains.yaml" command="load" />
+<node name="base_controller_spawner_stopped" pkg="controller_manager" type="spawner"
+      args="--stopped base_balance_controller
+                      state_estimate_update
+                      all_joints_position_group_controller
+                      all_joints_velocity_group_controller
+                      all_joints_effort_group_controller" />
+
+<!--get the real pose and tf from model states of gazebo-->
+  <node pkg="sim_assiants" type="pose_pub_node" name="pose_pub_node"/>
+<!--get the contact information from bumper sensor -->
+  <node pkg="sim_assiants" type="bumper_sensor_filter_node" name="bumper_sensor_filter_node" />
+
+  <node pkg="sim_assiants" type="joint_states_to_gazebo_controllers_node" name="joint_states_to_gazebo_controllers_node"/>
+<!--get joint states and pub the robot tf-->
+<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  <param name="publish_frequency" type="double" value="50.0" />
+  <param name="ignore_timestamp" type="bool" value="false" />
+</node>
+
+
+
+      <!-- <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find simpledog)/config/quadruped_display.rviz"
+    output="screen"/> -->
+    
+</launch>
+

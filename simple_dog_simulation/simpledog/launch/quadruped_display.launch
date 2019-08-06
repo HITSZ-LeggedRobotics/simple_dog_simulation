@@ -1,0 +1,36 @@
+<launch>
+  <arg
+    name="model" />
+  <arg
+    name="gui"
+    default="True" />
+  <arg name="kinect_enabled" default="true"/>
+  <arg name="robot_namespace" default="/"/>
+  <!-- <param
+    name="robot_description"
+    textfile="$(find simpledog)/urdf/quadruped_model.urdf" /> -->
+
+  <param name="/robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/quadruped_model.urdf.xacro'
+  --inorder
+  robot_namespace:=$(arg robot_namespace)
+  kinect_enabled:=$(arg kinect_enabled)"/>
+  <param
+    name="use_gui"
+    value="$(arg gui)" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find simpledog)/config/quadruped_display.rviz"
+    output="screen"/>
+
+    <node
+       name="joint_state_publisher"
+       pkg="joint_state_publisher"
+       type="joint_state_publisher" />
+
+</launch>
