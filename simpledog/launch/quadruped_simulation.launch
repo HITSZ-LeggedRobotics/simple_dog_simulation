@@ -93,4 +93,12 @@
     -urdf
     -param robot_description
     -model $(arg robot_namespace)" />-->
+
+      <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find simpledog)/config/quadruped_display.rviz"
+    output="screen"/>
+    
 </launch>
