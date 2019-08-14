@@ -11,6 +11,7 @@
   <param name="/free_gait/robot_state" value="/gazebo/robot_states" />
 
   <param name="/real_time_factor" value="0.30" />
+  <param name="ignore_base_motion" value="false"/>
   <!-- <param
     name="robot_description"
     textfile="$(find simpledog)/urdf/quadruped_model.urdf" /> -->
