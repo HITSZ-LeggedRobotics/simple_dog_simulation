@@ -72,6 +72,7 @@ private:
     tf::Transform odom2base, odom_to_footprint, footprint_to_base;
     tf::Quaternion q;
     ros::Time gazebo_time;
+    double real_time_factor;
 
 };
 

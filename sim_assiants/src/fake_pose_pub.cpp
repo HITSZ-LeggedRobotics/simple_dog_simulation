@@ -16,6 +16,13 @@ FakePose::FakePose(ros::NodeHandle& nodehandle)
     : nodeHandle_(nodehandle)
 {
     ROS_INFO("constructing.....");
+
+    if(!nodehandle.getParam("/real_time_factor", real_time_factor))
+      {
+        ROS_ERROR("Can't find parameter of 'real_time_factor'");
+//        return false;
+      }
+
     modelStatesSub_ = nodeHandle_.subscribe("/gazebo/model_states", 1, &FakePose::modelStatesCallback, this);
     gazebo_joint_states_sub_ = nodeHandle_.subscribe("/joint_states", 1, &FakePose::jointStatesCallback, this);
     footContactsSub_ = nodeHandle_.subscribe("/bumper_sensor_filter_node/foot_contacts", 1, &FakePose::footContactsCallback, this);
@@ -139,6 +146,13 @@ void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& mod
 //    geometry_msgs::Twist base_twist =*(modelStatesMsg->twist.end());
       geometry_msgs::Pose base_pose = modelStatesMsg->pose[10];
       geometry_msgs::Twist base_twist =modelStatesMsg->twist[10];
+      base_twist.linear.x *= real_time_factor;
+      base_twist.linear.y *= real_time_factor;
+      base_twist.linear.z *= real_time_factor;
+      base_twist.angular.x *= real_time_factor;
+      base_twist.angular.y *= real_time_factor;
+      base_twist.angular.z *= real_time_factor;
+
     fakePoseMsg_.pose.pose = base_pose;
     robot_state_.base_pose.pose = fakePoseMsg_.pose;
     robot_state_.base_pose.child_frame_id = "/base_link";
