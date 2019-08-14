@@ -187,8 +187,8 @@ void FakePose::modelStatesSubLoopThread()
         robot_state_pub_.publish(robot_state_);
 //        tfBoardcaster_.sendTransform(tf::StampedTransform(odom2base, ros::Time::now(), "/odom", "/base_link"));
         // gazebo_time = ros::Time::now();
-        tfBoardcaster_.sendTransform(tf::StampedTransform(odom_to_footprint, gazebo_time, "/gazebo_odom", "/gazebo_foot_print"));
-        tfBoardcaster_.sendTransform(tf::StampedTransform(footprint_to_base, gazebo_time, "/gazebo_foot_print", "/gazebo_base_link"));
+        tfBoardcaster_.sendTransform(tf::StampedTransform(odom_to_footprint, gazebo_time, "/odom", "/foot_print"));
+        tfBoardcaster_.sendTransform(tf::StampedTransform(footprint_to_base, gazebo_time, "/foot_print", "/base_link"));
         fakePosePub_.publish(fakePoseMsg_);
         gazebo_pub.publish(gazeboPoseMsg);
         lock.unlock();

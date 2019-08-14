@@ -43,10 +43,10 @@
     </sensor>
     <material>Gazebo/Blue</material>
   </gazebo>
-  
 
 
-  <gazebo reference="imu_link">
+
+  <!-- <gazebo reference="imu_link">
     <gravity>true</gravity>
     <sensor name="imu" type="imu">`
       <always_on>true</always_on>
@@ -65,8 +65,8 @@
       <pose>0 0 0 0 0 0</pose>
     </sensor>
     <material>Gazebo/Blue</material>
-  </gazebo>
-  
+  </gazebo> -->
+
 <!-- <gazebo reference="imu_link">
     <sensor type="imu" name="imu">
       <always_on>true</always_on>
