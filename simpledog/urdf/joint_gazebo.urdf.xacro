@@ -37,13 +37,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <provideFeedback>true</provideFeedback>
                 </gazebo>
 
-                <gazebo>
+                <!-- <gazebo>
                     <plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
                         <updateRate>100.0</updateRate>
                         <topicName>${joint_prefix}joint_ft_feedback</topicName>
                         <jointName>${joint_prefix}joint</jointName>
                     </plugin>
-                </gazebo>
+                </gazebo> -->
 
                 <transmission name="${joint_prefix}joint_trans" type="SimpleTransmission">
                         <type>transmission_interface/SimpleTransmission</type>
