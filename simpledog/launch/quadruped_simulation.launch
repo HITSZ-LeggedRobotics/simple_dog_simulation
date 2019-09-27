@@ -9,10 +9,12 @@
 
   <arg name="x" default="0"/>
   <arg name="y" default="0"/>
-  <arg name="z" default="0.5"/>
+  <arg name="z" default="1.0"/>
   <arg name="yaw" default="0"/>
 
   <arg name="fake_pose" default="true"/>
+
+  <!-- <param name="/use_terrian_map" value="ture" /> -->
 
 <node name="spawn_simpledog_model" pkg="gazebo_ros" type="spawn_model"
     args="-x $(arg x)
@@ -23,7 +25,11 @@
     -urdf
     -param robot_description
     -model $(arg robot_namespace)" />
+
     <param name="/use_gazebo_feedback" value="$(arg fake_pose)"/>
+
+    <param name="/legodom/use_gazebo_feedback" value="false"/>
+
 
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -37,7 +43,10 @@
   </include>
   <param name="/free_gait/robot_state" value="/legodom/robot_states" />
 
-  <param name="/real_time_factor" value="0.40" />
+  <param name="/real_time_factor" value="0.35" />
+  <param name="/cal_fator_x" value="1.25" />
+  <param name="/cal_fator_y" value="1.25" />
+  <param name="/cal_fator_z" value="1.0" />
 
   <param name="robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/quadruped_model.urdf.xacro'
   --inorder
