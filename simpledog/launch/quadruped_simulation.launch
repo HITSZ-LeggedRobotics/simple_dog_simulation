@@ -34,7 +34,7 @@
   </include>
   <param name="/free_gait/robot_state" value="/gazebo/robot_states" />
 
-  <param name="/real_time_factor" value="0.30" />
+  <param name="/real_time_factor" value="0.58" />
 
   <param name="robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/quadruped_model.urdf.xacro'
   --inorder
