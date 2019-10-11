@@ -65,7 +65,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <jointName>${foot_prefix}_joint</jointName>
                 </plugin>
             </gazebo> -->
-            <gazebo>
+            <!-- <gazebo>
               <plugin name="f3d_${foot_prefix}_controller" filename="libgazebo_ros_f3d.so">
                 <alwaysOn>true</alwaysOn>
                 <updateRate>10.0</updateRate>
@@ -73,7 +73,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 <bodyName>${foot_prefix}_Link</bodyName>
                 <topicName>${foot_prefix}_force_ground_truth</topicName>
               </plugin>
-            </gazebo>
+            </gazebo> -->
 
 
         </xacro:macro>

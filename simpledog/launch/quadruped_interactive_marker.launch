@@ -8,7 +8,7 @@
   <arg name="robot_namespace" default="/"/>
 
   <include file="$(find free_gait_ros)/launch/test.launch"/>
-  <param name="/free_gait/robot_state" value="/gazebo/robot_states" />
+  <!-- <param name="/free_gait/robot_state" value="/gazebo/robot_states" /> -->
 
   <param name="/real_time_factor" value="0.30" />
   <param name="ignore_base_motion" value="false"/>
