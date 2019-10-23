@@ -45,16 +45,11 @@
     <xacro:include filename="$(find simpledog)/urdf/joint_gazebo.urdf.xacro" />
     <!-- <xacro:include filename="$(find simpledog)/urdf/kinect.urdf.xacro"/> -->
     <xacro:include filename="$(find simpledog)/urdf/foot_sensor_gazebo.urdf.xacro" />
-  <!--load kinect urdf-->
-  <!-- <xacro:if value="$(arg kinect_enabled)">
-    <xacro:kinect_camera prefix="camera" robot_namespace="$(arg robot_namespace)"/>
-    <joint name="kinect_frame_joint" type="fixed">
-      <origin xyz="0.5 0.0 0.0" rpy="0 0.8 0" />
-      <parent link="base_link"/>
-      <child link="zed_base_link"/>
-    </joint>
-  </xacro:if> -->
 
+
+  <link name="zed_base_link">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </link>
   <joint name="zed_base_joint" type="fixed">
     <origin xyz="0.5 0.0 0.0" rpy="0 0.8 0" />
     <parent link="base_link"/>
