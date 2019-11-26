@@ -36,7 +36,13 @@
         <child link="imu_link"/>
     </joint>
 
-
+    <!-- <link name = "world"/>
+    <joint name="body_link" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+    </joint> -->
   <!-- <xacro:arg name="laser_visual"  default="false"/> -->
   <!-- <xacro:arg name="camera_visual" default="false"/> -->
   <!-- <xacro:arg name="imu_visual"    default="false"/> -->
@@ -168,7 +174,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -227,7 +233,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-7.0"
       upper="7.0"/>
@@ -286,7 +292,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -398,7 +404,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -457,7 +463,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-7.0"
       upper="7.0"/>
@@ -516,7 +522,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -628,7 +634,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -687,7 +693,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-7.0"
       upper="7.0"/>
@@ -746,7 +752,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -858,7 +864,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -917,7 +923,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-7.0"
       upper="7.0"/>
@@ -976,7 +982,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="60"
+      effort="300"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
