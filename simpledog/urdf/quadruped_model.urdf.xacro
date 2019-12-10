@@ -36,6 +36,13 @@
         <child link="imu_link"/>
     </joint>
 
+    <!-- <link name = "world"/>
+    <joint name="body_link" type="fixed">
+      <parent link="world"/>
+      <child link="base_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+    </joint> -->
 
   <!-- <xacro:arg name="laser_visual"  default="false"/> -->
   <!-- <xacro:arg name="camera_visual" default="false"/> -->
@@ -46,12 +53,21 @@
     <!-- <xacro:include filename="$(find simpledog)/urdf/kinect.urdf.xacro"/> -->
     <xacro:include filename="$(find simpledog)/urdf/foot_sensor_gazebo.urdf.xacro" />
 
+    <!--load kinect urdf-->
+    <!-- <xacro:if value="$(arg kinect_enabled)">
+      <xacro:kinect_camera prefix="camera" robot_namespace="$(arg robot_namespace)"/>
+      <joint name="kinect_frame_joint" type="fixed">
+        <origin xyz="0.5 0 0.075" rpy="0 0.8 0" />
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+      </joint>
+    </xacro:if> -->
 
   <link name="zed_base_link">
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </link>
   <joint name="zed_base_joint" type="fixed">
-    <origin xyz="0.5 0.0 0.15" rpy="0 0.8 0" />
+    <origin xyz="0.48 0.0 0.15" rpy="0 0.8 0" />
     <parent link="base_link"/>
     <child link="zed_base_link"/>
   </joint>
@@ -83,7 +99,7 @@
         xyz="0.006699 -0.000736 0.001288"
         rpy="0 0 0" />
       <mass
-        value="27.801" />
+        value="37.801" />
       <inertia
         ixx="0.263893"
         ixy="0"
