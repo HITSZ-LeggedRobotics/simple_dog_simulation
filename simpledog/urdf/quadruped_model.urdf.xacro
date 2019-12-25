@@ -43,23 +43,34 @@
       <origin xyz="0 0 0" rpy="0 0 0" />
       <axis xyz="0 0 1" />
     </joint> -->
+
   <!-- <xacro:arg name="laser_visual"  default="false"/> -->
   <!-- <xacro:arg name="camera_visual" default="false"/> -->
   <!-- <xacro:arg name="imu_visual"    default="false"/> -->
-  <xacro:arg name="kinect_enabled"    default="true"/>
+  <!-- <xacro:arg name="kinect_enabled"    default="true"/> -->
     <xacro:include filename="$(find simpledog)/urdf/simpledog_gazebo.urdf.xacro" />
     <xacro:include filename="$(find simpledog)/urdf/joint_gazebo.urdf.xacro" />
-    <xacro:include filename="$(find simpledog)/urdf/kinect.urdf.xacro"/>
+    <!-- <xacro:include filename="$(find simpledog)/urdf/kinect.urdf.xacro"/> -->
     <xacro:include filename="$(find simpledog)/urdf/foot_sensor_gazebo.urdf.xacro" />
-  <!--load kinect urdf-->
-  <xacro:if value="$(arg kinect_enabled)">
-    <xacro:kinect_camera prefix="camera" robot_namespace="$(arg robot_namespace)"/>
-    <joint name="kinect_frame_joint" type="fixed">
-      <origin xyz="0.5 0.0 0.0" rpy="0 0.8 0" />
-      <parent link="base_link"/>
-      <child link="camera_link"/>
-    </joint>
-  </xacro:if>
+
+    <!--load kinect urdf-->
+    <!-- <xacro:if value="$(arg kinect_enabled)">
+      <xacro:kinect_camera prefix="camera" robot_namespace="$(arg robot_namespace)"/>
+      <joint name="kinect_frame_joint" type="fixed">
+        <origin xyz="0.5 0 0.075" rpy="0 0.8 0" />
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+      </joint>
+    </xacro:if> -->
+
+  <link name="zed_base_link">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </link>
+  <joint name="zed_base_joint" type="fixed">
+    <origin xyz="0.48 0.0 0.15" rpy="0 0.8 0" />
+    <parent link="base_link"/>
+    <child link="zed_base_link"/>
+  </joint>
 
   <!-- simple dog joints macros configure the joint driver and param-->
   <xacro:simpledog_joint joint_prefix="front_left_1_"> </xacro:simpledog_joint>
@@ -88,7 +99,7 @@
         xyz="0.006699 -0.000736 0.001288"
         rpy="0 0 0" />
       <mass
-        value="27.801" />
+        value="37.801" />
       <inertia
         ixx="0.263893"
         ixy="0"
@@ -174,7 +185,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -233,7 +244,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-7.0"
       upper="7.0"/>
@@ -292,7 +303,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -404,7 +415,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -463,7 +474,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-7.0"
       upper="7.0"/>
@@ -522,7 +533,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -634,7 +645,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -693,7 +704,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-7.0"
       upper="7.0"/>
@@ -752,7 +763,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -864,7 +875,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>
@@ -923,7 +934,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-7.0"
       upper="7.0"/>
@@ -982,7 +993,7 @@
     <axis
       xyz="0 0 1" />
       <limit
-      effort="300"
+      effort="60"
       velocity="10"
       lower="-3.0"
       upper="3.0"/>

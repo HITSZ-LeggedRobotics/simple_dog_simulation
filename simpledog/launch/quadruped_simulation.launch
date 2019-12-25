@@ -62,9 +62,8 @@
 <!-- Spawn controllers -->
 <node name="base_controller_spawner" pkg="controller_manager" type="spawner"
       args="simpledog_joint_publisher
-      all_joints_position_effort_group_controller" />
+            all_joints_position_effort_group_controller" />
             <!-- front_left_1_joint_position_controller
-            all_joints_position_effort_group_controller
             front_left_2_joint_position_controller
             front_left_3_joint_position_controller
             front_right_1_joint_position_controller
@@ -81,7 +80,6 @@
 <node name="base_controller_spawner_stopped" pkg="controller_manager" type="spawner"
       args="--stopped state_estimate_update
                       base_balance_controller
-                      Position_controller
                       all_joints_position_group_controller
                       all_joints_velocity_group_controller
                       all_joints_effort_group_controller" />
