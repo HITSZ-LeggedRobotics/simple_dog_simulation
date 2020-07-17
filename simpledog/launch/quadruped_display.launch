@@ -10,7 +10,7 @@
     name="robot_description"
     textfile="$(find simpledog)/urdf/quadruped_model.urdf" /> -->
 
-  <param name="/robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/quadruped_model.urdf.xacro'
+  <param name="/robot_description" command="$(find xacro)/xacro '$(find simpledog)/urdf/quadruped_model_for_mpc.urdf.xacro'
   --inorder
   robot_namespace:=$(arg robot_namespace)
   kinect_enabled:=$(arg kinect_enabled)"/>

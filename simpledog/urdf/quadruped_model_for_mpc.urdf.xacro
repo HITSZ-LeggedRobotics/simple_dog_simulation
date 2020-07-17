@@ -36,13 +36,13 @@
         <child link="imu_link"/>
     </joint>
 
-    <!-- <link name = "world"/>
+    <link name = "world"/>
     <joint name="body_link" type="fixed">
       <parent link="world"/>
       <child link="base_link"/>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <axis xyz="0 0 1" />
-    </joint> -->
+    </joint>
 
   <!-- <xacro:arg name="laser_visual"  default="false"/> -->
   <!-- <xacro:arg name="camera_visual" default="false"/> -->
@@ -63,14 +63,14 @@
       </joint>
     </xacro:if> -->
 
-  <link name="zed_base_link">
+  <!-- <link name="zed_base_link">
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </link>
   <joint name="zed_base_joint" type="fixed">
     <origin xyz="0.48 0.0 0.15" rpy="0 0.8 0" />
     <parent link="base_link"/>
     <child link="zed_base_link"/>
-  </joint>
+  </joint> -->
 
   <!-- simple dog joints macros configure the joint driver and param-->
   <xacro:simpledog_joint joint_prefix="front_left_1_"> </xacro:simpledog_joint>
@@ -183,7 +183,7 @@
     <child
       link="front_left_1_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
       <limit
       effort="60"
       velocity="10"
@@ -413,7 +413,7 @@
     <child
       link="front_right_1_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
       <limit
       effort="60"
       velocity="10"
@@ -472,7 +472,7 @@
     <child
       link="front_right_2_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
       <limit
       effort="60"
       velocity="10"
@@ -531,7 +531,7 @@
     <child
       link="front_right_3_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
       <limit
       effort="60"
       velocity="10"
@@ -643,7 +643,7 @@
     <child
       link="rear_right_1_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
       <limit
       effort="60"
       velocity="10"
@@ -702,7 +702,7 @@
     <child
       link="rear_right_2_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
       <limit
       effort="60"
       velocity="10"
@@ -761,7 +761,7 @@
     <child
       link="rear_right_3_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
       <limit
       effort="60"
       velocity="10"
@@ -873,7 +873,7 @@
     <child
       link="rear_left_1_Link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
       <limit
       effort="60"
       velocity="10"

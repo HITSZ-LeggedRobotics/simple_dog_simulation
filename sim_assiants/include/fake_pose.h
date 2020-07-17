@@ -12,6 +12,7 @@
 #include "sim_assiants/FootContacts.h"
 #include "eigen3/Eigen/Geometry"
 #include "eigen3/Eigen/Core"
+#include "nav_msgs/Odometry.h"
 
 namespace fake_pose {
 
@@ -53,11 +54,11 @@ private:
     //message_filters::Subscriber<gazebo_msgs::ModelStates> timeSeqSub_;
 
     //! ROS publisher
-    ros::Publisher fakePosePub_, robot_state_pub_;
+    ros::Publisher fakePosePub_, robot_state_pub_, gazebo_pub;
 
     //! pose
     geometry_msgs::PoseWithCovarianceStamped fakePoseMsg_;
-
+    nav_msgs::Odometry gazeboPoseMsg;
     //! TF boardcaster
     tf::TransformBroadcaster tfBoardcaster_;
 
@@ -71,6 +72,7 @@ private:
     tf::Transform odom2base, odom_to_footprint, footprint_to_base;
     tf::Quaternion q;
     ros::Time gazebo_time;
+    double real_time_factor;
 
 };
 
