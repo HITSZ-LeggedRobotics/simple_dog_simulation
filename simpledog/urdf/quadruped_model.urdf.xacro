@@ -36,13 +36,13 @@
         <child link="imu_link"/>
     </joint>
 
-    <link name = "world"/>
+   <!-- <link name = "world"/>
     <joint name="body_link" type="fixed">
       <parent link="world"/>
       <child link="base_link"/>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <axis xyz="0 0 1" />
-    </joint>
+    </joint> -->
 
   <!-- <xacro:arg name="laser_visual"  default="false"/> -->
   <!-- <xacro:arg name="camera_visual" default="false"/> -->
