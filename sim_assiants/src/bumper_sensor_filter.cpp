@@ -43,6 +43,7 @@ private:
    */
   void leftFrontFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state){
     lf_wrench_.header.frame_id = "lf_foot_Link";
+//    ROS_ERROR_STREAM("the contact state is " << contact_state->states.empty());
     if(!contact_state->states.empty())
       {
         // if has contact, there same data in states array, just get the first
@@ -73,6 +74,8 @@ private:
 
   void rightFrontFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
   {
+//      ROS_INFO("Here");
+//      ROS_ERROR_STREAM("the contact state is " << contact_state->states.empty());
     rf_wrench_.header.frame_id = "rf_foot_Link";
     if(!contact_state->states.empty())
       {
@@ -101,6 +104,7 @@ private:
   }
   void rightHindFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
   {
+//      ROS_ERROR_STREAM("the contact state is " << contact_state->states.empty());
     rh_wrench_.header.frame_id = "rh_foot_Link";
     if(!contact_state->states.empty())
       {
@@ -128,6 +132,7 @@ private:
   }
   void leftHindFootBumperCallback(const gazebo_msgs::ContactsStateConstPtr& contact_state)
   {
+//      ROS_ERROR_STREAM("the contact state is " << contact_state->states.empty());
     lh_wrench_.header.frame_id = "lh_foot_Link";
     if(!contact_state->states.empty())
       {
@@ -172,6 +177,11 @@ private:
 //        rh_footContactPub_.publish(rh_foot_contact_);
 //        lh_footContactPub_.publish(lh_foot_contact_);
         footContactsPub_.publish(foot_contacts_);
+//        std::cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" << std::endl;
+//        std::cout << foot_contacts_.foot_contacts.at(0).is_contact << std::endl;
+//        std::cout << foot_contacts_.foot_contacts.at(1).is_contact << std::endl;
+//        std::cout << foot_contacts_.foot_contacts.at(2).is_contact << std::endl;
+//        std::cout << foot_contacts_.foot_contacts.at(3).is_contact << std::endl;
         footstatepuball.publish(footstate_);
 
         lock.unlock();
