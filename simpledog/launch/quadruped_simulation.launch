@@ -82,6 +82,7 @@
       args="--stopped state_estimate_update
                       base_balance_controller
                       configure_change_controller
+                      walk_forward_controller
                       all_joints_position_group_controller
                       all_joints_velocity_group_controller
                       all_joints_effort_group_controller" />

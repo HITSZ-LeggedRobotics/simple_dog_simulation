@@ -36,7 +36,7 @@
         <child link="imu_link"/>
     </joint>
 
-   <!-- <link name = "world"/>
+    <!-- <name = "world"/>
     <joint name="body_link" type="fixed">
       <parent link="world"/>
       <child link="base_link"/>
