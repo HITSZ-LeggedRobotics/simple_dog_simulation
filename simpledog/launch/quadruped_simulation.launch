@@ -74,7 +74,8 @@
             rear_right_3_joint_position_controller
             rear_left_1_joint_position_controller
             rear_left_2_joint_position_controller
-            rear_left_3_joint_position_controller"/> -->
+            rear_left_3_joint_position_controller
+            configure_change_controller"/> -->
 <rosparam file="$(find balance_controller)/config/controller_gains_gazebo.yaml" command="load" />
 
 <node name="base_controller_spawner_stopped" pkg="controller_manager" type="spawner"
