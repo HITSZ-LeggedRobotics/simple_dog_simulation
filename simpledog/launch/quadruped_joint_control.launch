@@ -19,7 +19,7 @@
     value="$(arg gui)" />
 
 <!-- move as command, kinematics_test_node -->
-  <node name="send_joint_angle" pkg="quadruped_model" type="kinematics_test_node" />
+  <!-- <node name="send_joint_angle" pkg="quadruped_model" type="kinematics_test_node" /> -->
 
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
@@ -35,6 +35,6 @@
     output="screen"/>
 
 <!-- move by pull the tiao -->
-<!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 
 </launch>

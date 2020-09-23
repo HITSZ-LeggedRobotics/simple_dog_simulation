@@ -152,7 +152,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        world:
+        zed_base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -233,7 +233,7 @@ Visualization Manager:
           Value: true
         rh_foot_Link:
           Value: true
-        world:
+        zed_base_link:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -241,30 +241,31 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        world:
-          base_link:
-            front_left_1_Link:
-              front_left_2_Link:
-                front_left_3_Link:
-                  lf_foot_Link:
-                    {}
-            front_right_1_Link:
-              front_right_2_Link:
-                front_right_3_Link:
-                  rf_foot_Link:
-                    {}
-            imu_link:
-              {}
-            rear_left_1_Link:
-              rear_left_2_Link:
-                rear_left_3_Link:
-                  lh_foot_Link:
-                    {}
-            rear_right_1_Link:
-              rear_right_2_Link:
-                rear_right_3_Link:
-                  rh_foot_Link:
-                    {}
+        base_link:
+          front_left_1_Link:
+            front_left_2_Link:
+              front_left_3_Link:
+                lf_foot_Link:
+                  {}
+          front_right_1_Link:
+            front_right_2_Link:
+              front_right_3_Link:
+                rf_foot_Link:
+                  {}
+          imu_link:
+            {}
+          rear_left_1_Link:
+            rear_left_2_Link:
+              rear_left_3_Link:
+                lh_foot_Link:
+                  {}
+          rear_right_1_Link:
+            rear_right_2_Link:
+              rear_right_3_Link:
+                rh_foot_Link:
+                  {}
+          zed_base_link:
+            {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -307,10 +308,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.590398133
+      Pitch: -0.0046016397
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.09356976
+      Yaw: 1.79175508
     Saved: ~
 Window Geometry:
   Displays:

@@ -114,3 +114,9 @@ ros::Publisher joint12ControllerCommandPub =
 There also joint feed back,
 `rostopic list`
 to see some feedback topic
+
+### How to display and control robot in rviz
+```
+roslaunch simpledog quadruped_display.launch
+```
+注意进行控制时候需要加上时间戳，或者在launch文件中ignore_time_stamp;
