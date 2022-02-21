@@ -62,7 +62,57 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        Link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        arm_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        finger_Link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        finger_Link2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -148,6 +198,11 @@ Visualization Manager:
           Show Trail: false
           Value: true
         rh_foot_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sensor_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -197,7 +252,27 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        Link1:
+          Value: true
+        Link2:
+          Value: true
+        Link3:
+          Value: true
+        Link4:
+          Value: true
+        Link5:
+          Value: true
+        Link6:
+          Value: true
+        Link7:
+          Value: true
+        arm_base_link:
+          Value: true
         base_link:
+          Value: true
+        finger_Link1:
+          Value: true
+        finger_Link2:
           Value: true
         front_left_1_Link:
           Value: true
@@ -233,6 +308,8 @@ Visualization Manager:
           Value: true
         rh_foot_Link:
           Value: true
+        sensor_link:
+          Value: true
         zed_base_link:
           Value: true
       Marker Scale: 1
@@ -242,6 +319,18 @@ Visualization Manager:
       Show Names: false
       Tree:
         base_link:
+          arm_base_link:
+            Link1:
+              Link2:
+                Link3:
+                  Link4:
+                    Link5:
+                      Link6:
+                        Link7:
+                          sensor_link:
+                            finger_Link1:
+                              finger_Link2:
+                                {}
           front_left_1_Link:
             front_left_2_Link:
               front_left_3_Link:
@@ -293,16 +382,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.81313252
+      Distance: 4.17700529
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.16869168
-        Y: 0.153317496
-        Z: -0.356113046
+        X: -0.0774514601
+        Y: 0.100159824
+        Z: 0.0960556269
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false

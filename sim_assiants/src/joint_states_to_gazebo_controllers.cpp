@@ -40,19 +40,43 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "joint_command_interface");
     ros::NodeHandle nh;
-    joint_group_positions.data.resize(12);
-    joint_group_positions.data[0] = 0;
-    joint_group_positions.data[1] = 1.4;
-    joint_group_positions.data[2] = -2.75;
-    joint_group_positions.data[3] = 0;
-    joint_group_positions.data[4] = -1.4;
-    joint_group_positions.data[5] = 2.75;
-    joint_group_positions.data[6] = 0;
-    joint_group_positions.data[7] = 1.4;
-    joint_group_positions.data[8] = -2.75;
-    joint_group_positions.data[9] = 0;
-    joint_group_positions.data[10] = -1.4;
-    joint_group_positions.data[11] = 2.75;
+//    joint_group_positions.data.resize(19);
+    // joint_group_positions.data[0] = 0;
+    // joint_group_positions.data[1] = 1.4;
+    // joint_group_positions.data[2] = -2.75;
+    // joint_group_positions.data[3] = 0;
+    // joint_group_positions.data[4] = -1.4;
+    // joint_group_positions.data[5] = 2.75;
+    // joint_group_positions.data[6] = 0;
+    // joint_group_positions.data[7] = 1.4;
+    // joint_group_positions.data[8] = -2.75;
+    // joint_group_positions.data[9] = 0;
+    // joint_group_positions.data[10] = -1.4;
+    // joint_group_positions.data[11] = 2.75;
+
+   joint_group_positions.data.resize(19);
+   joint_group_positions.data[0] = 0;
+   joint_group_positions.data[1] = 0.5;
+   joint_group_positions.data[2] = -1;
+   joint_group_positions.data[3] = 0;
+   joint_group_positions.data[4] = -0.5;
+   joint_group_positions.data[5] = 1;
+   joint_group_positions.data[6] = 0;
+   joint_group_positions.data[7] = 0.5;
+   joint_group_positions.data[8] = -1;
+   joint_group_positions.data[9] = 0;
+   joint_group_positions.data[10] = -0.5;
+   joint_group_positions.data[11] = 1;
+
+
+    joint_group_positions.data[12] = -0.2;
+    joint_group_positions.data[13] = -0.6;
+    joint_group_positions.data[14] = 0;
+    joint_group_positions.data[15] = 1.3;
+    joint_group_positions.data[16] = 0;
+    joint_group_positions.data[17] = 1.1;
+    joint_group_positions.data[18] = 0;
+
     ros::Subscriber jointCommandSub = nh.subscribe("/action_server_test_node/all_joint_position", 1, jointCommandCallback);
     ros::Publisher joint_group_position_pub = nh.advertise<std_msgs::Float64MultiArray>("/all_joints_position_effort_group_controller/command",1);
     //    ros::Subscriber resetCommandSub = nh.subscribe("/reset_flag",1,resetCommandCallback);

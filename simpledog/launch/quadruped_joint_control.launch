@@ -18,10 +18,6 @@
     name="use_gui"
     value="$(arg gui)" />
 
-<!-- move as command, kinematics_test_node -->
-  <!-- <node name="send_joint_angle" pkg="quadruped_model" type="kinematics_test_node" /> -->
-
-
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
     <param name= "ignore_timestamp" type= "bool" value= "true"/>
     <!-- <remap from="/joint_states" to="/test_joint_states"/> -->
