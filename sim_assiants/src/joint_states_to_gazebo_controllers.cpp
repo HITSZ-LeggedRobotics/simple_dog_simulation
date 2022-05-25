@@ -5,6 +5,8 @@
 #include "std_msgs/Float64MultiArray.h"
 #include "std_msgs/Bool.h"
 #include "string.h"
+
+#include "fstream"
 using namespace std;
 
 //std_msgs::Float64 joint1,joint2,joint3,joint4,joint5,joint6,joint7,joint8,joint9,joint10,joint11,joint12;
@@ -77,6 +79,53 @@ int main(int argc, char **argv)
     joint_group_positions.data[17] = 1.1;
     joint_group_positions.data[18] = 0;
 
+
+    std::vector<double> joint_angles_temp_;
+    joint_angles_temp_.resize(18);
+    std::ifstream readfile;
+    readfile.open("/home/kun/catkin_ws_dependency/haibinangles.txt");//calculated.txt
+    assert(readfile.is_open());
+    readfile >> joint_angles_temp_[0] >> joint_angles_temp_[1]>> joint_angles_temp_[2] >> joint_angles_temp_[3]>> joint_angles_temp_[4]
+        >> joint_angles_temp_[5]>> joint_angles_temp_[6]      >> joint_angles_temp_[7] >> joint_angles_temp_[8]>> joint_angles_temp_[9]
+        >> joint_angles_temp_[10] >> joint_angles_temp_[11] >> joint_angles_temp_[12] >> joint_angles_temp_[13] >> joint_angles_temp_[14]
+        >> joint_angles_temp_[15] >> joint_angles_temp_[16] >> joint_angles_temp_[17];
+    std::cout << """""""""""""""""""""""""""""""""""""""""""""" << std::endl;
+    std::cout <<"load the joint angle" << std::endl;
+    std::cout <<"the joint angles is " << std::endl;
+
+    for (unsigned int i = 0; i < joint_angles_temp_.size(); i++) {
+        std::cout << joint_angles_temp_[i] << " ";
+    }
+
+    readfile.close();
+
+    joint_group_positions.data.resize(19);
+    joint_group_positions.data[0] = joint_angles_temp_[0];
+    joint_group_positions.data[1] = joint_angles_temp_[1];
+    joint_group_positions.data[2] = joint_angles_temp_[2];
+
+    joint_group_positions.data[3] = joint_angles_temp_[3];
+    joint_group_positions.data[4] = joint_angles_temp_[4];
+    joint_group_positions.data[5] = joint_angles_temp_[5];
+
+    joint_group_positions.data[6] = joint_angles_temp_[6];
+    joint_group_positions.data[7] = joint_angles_temp_[7];
+    joint_group_positions.data[8] = joint_angles_temp_[8];
+
+    joint_group_positions.data[9] = joint_angles_temp_[9];
+    joint_group_positions.data[10] = joint_angles_temp_[10];
+    joint_group_positions.data[11] = joint_angles_temp_[11];
+
+
+    joint_group_positions.data[12] = joint_angles_temp_[12];
+    joint_group_positions.data[13] = joint_angles_temp_[13] + M_PI / 2;
+    joint_group_positions.data[14] = 0;
+    joint_group_positions.data[15] = joint_angles_temp_[14] - M_PI / 2;
+    joint_group_positions.data[16] = joint_angles_temp_[15];
+    joint_group_positions.data[17] = joint_angles_temp_[16];
+    joint_group_positions.data[18] = joint_angles_temp_[17];
+
+
     ros::Subscriber jointCommandSub = nh.subscribe("/action_server_test_node/all_joint_position", 1, jointCommandCallback);
     ros::Publisher joint_group_position_pub = nh.advertise<std_msgs::Float64MultiArray>("/all_joints_position_effort_group_controller/command",1);
     //    ros::Subscriber resetCommandSub = nh.subscribe("/reset_flag",1,resetCommandCallback);
@@ -108,23 +157,7 @@ int main(int argc, char **argv)
     ROS_INFO("get Ready");
     while(ros::ok())
     {
-//        if(!startFlag){
-//            ROS_INFO("Wait For Reset");
-//        }
-//        else{
-            ROS_INFO("send joint command once");
-//            joint1ControllerCommandPub.publish(joint1);
-//            joint2ControllerCommandPub.publish(joint2);
-//            joint3ControllerCommandPub.publish(joint3);
-//            joint4ControllerCommandPub.publish(joint4);
-//            joint5ControllerCommandPub.publish(joint5);
-//            joint6ControllerCommandPub.publish(joint6);
-//            joint7ControllerCommandPub.publish(joint7);
-//            joint8ControllerCommandPub.publish(joint8);
-//            joint9ControllerCommandPub.publish(joint9);
-//            joint10ControllerCommandPub.publish(joint10);
-//            joint11ControllerCommandPub.publish(joint11);
-//            joint12ControllerCommandPub.publish(joint12);
+//            ROS_INFO("send joint command once");
             joint_group_position_pub.publish(joint_group_positions);
 
 //        }
