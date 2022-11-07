@@ -86,8 +86,7 @@
                       base_balance_controller
                       configure_change_controller
                       walk_forward_controller
-                      all_joints_effort_group_controller
-                      static_walk_controller" />
+                      all_joints_effort_group_controller" />
 
 <!--get the real pose and tf from model states of gazebo-->
 <group if="$(arg fake_pose)">

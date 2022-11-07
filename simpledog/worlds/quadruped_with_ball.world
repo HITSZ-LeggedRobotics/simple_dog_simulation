@@ -1125,10 +1125,144 @@
       <pose frame=''>-0.923781 -1.55581 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>1503 880000000</sim_time>
-      <real_time>43 759743102</real_time>
-      <wall_time>1666168457 444560032</wall_time>
-      <iterations>43684</iterations>
+      <sim_time>1584 862000000</sim_time>
+      <real_time>183 789431808</real_time>
+      <wall_time>1654155244 564700174</wall_time>
+      <iterations>156007</iterations>
+      <model name='/'>
+        <pose frame=''>-0.303748 0.622851 0.316313 -1.70759 -0.139153 0.402836</pose>
+        <scale>1 1 1</scale>
+        <link name='Link1'>
+          <pose frame=''>-0.344277 0.724095 0.301252 -1.72486 0.49966 0.309961</pose>
+          <velocity>0.005079 -0.033213 0.028318 0.086657 0.023456 -0.020352</velocity>
+          <acceleration>-0.044317 0.167609 -0.36796 0.080296 -0.948153 -3.00539</acceleration>
+          <wrench>-0.081321 0.307563 -0.675207 0 -0 0</wrench>
+        </link>
+        <link name='Link2'>
+          <pose frame=''>-0.436401 0.952045 0.267815 2.62102 0.039283 -0.879468</pose>
+          <velocity>0.008899 -0.028323 0.050238 0.081081 0.019208 -0.030171</velocity>
+          <acceleration>-0.044931 0.164319 -0.385501 0.809825 -0.291033 -1.63093</acceleration>
+          <wrench>-0.071454 0.261317 -0.613062 0 -0 0</wrench>
+        </link>
+        <link name='Link3'>
+          <pose frame=''>-0.436584 0.951916 0.267869 -2.09166 -0.015424 -0.864868</pose>
+          <velocity>0.009356 -0.028788 0.05052 0.201022 0.120585 -0.120861</velocity>
+          <acceleration>-0.056787 0.176243 -0.382003 0.393066 -1.03406 0.983371</acceleration>
+          <wrench>-0.082511 0.256082 -0.55505 0 -0 0</wrench>
+        </link>
+        <link name='Link4'>
+          <pose frame=''>-0.233742 1.12176 0.116107 2.91578 -0.473574 -1.95001</pose>
+          <velocity>0.011616 -0.023078 0.060396 0.246818 0.157082 -0.022354</velocity>
+          <acceleration>-0.014686 0.201937 -0.287162 0.055976 0.197407 -0.539048</acceleration>
+          <wrench>-0.016903 0.23243 -0.330524 0 -0 0</wrench>
+        </link>
+        <link name='Link5'>
+          <pose frame=''>-0.233772 1.12179 0.116134 -1.80153 -0.447803 -1.93993</pose>
+          <velocity>0.012453 -0.023946 0.058954 0.27823 0.136962 -0.021084</velocity>
+          <acceleration>0.031788 0.293792 -0.133551 0.662229 0.286295 0.620259</acceleration>
+          <wrench>0.030676 0.283509 -0.128877 0 -0 0</wrench>
+        </link>
+        <link name='Link6'>
+          <pose frame=''>0.03313 0.986033 0.053007 -2.86622 -0.559288 -2.83194</pose>
+          <velocity>0.000729 -0.011613 -0.015403 0.224214 0.069411 -0.141769</velocity>
+          <acceleration>0.182302 0.447723 0.361212 1.9 -0.620058 0.381656</acceleration>
+          <wrench>0.175922 0.432052 0.34857 0 -0 0</wrench>
+        </link>
+        <link name='Link7'>
+          <pose frame=''>0.033087 0.986049 0.053059 -1.18397 0.915761 -2.37079</pose>
+          <velocity>0.002535 -0.011582 -0.014669 0.241309 0.035569 -0.129491</velocity>
+          <acceleration>0.389817 0.775102 0.939221 -1.73513 0.587419 1.91174</acceleration>
+          <wrench>0.845512 1.6812 2.03717 0 -0 0</wrench>
+        </link>
+        <link name='base_link'>
+          <pose frame=''>-0.303748 0.622851 0.316313 -1.70759 -0.139153 0.402836</pose>
+          <velocity>0.003382 -0.03552 0.018136 0.095741 0.001701 -0.01761</velocity>
+          <acceleration>-0.022754 0.212809 -0.139375 -2.97658 -0.078779 -0.070299</acceleration>
+          <wrench>-0.213108 1.9931 -1.30535 0 -0 0</wrench>
+        </link>
+        <link name='front_left_1_Link'>
+          <pose frame=''>0.102286 0.774538 0.303245 -1.42944 0.18114 -1.14231</pose>
+          <velocity>0.006059 -0.041518 0.031934 0.147413 0.022895 -0.009971</velocity>
+          <acceleration>-0.024222 0.157264 -0.214657 2.15484 -0.171825 2.30345</acceleration>
+          <wrench>-0.070804 0.459699 -0.627464 0 -0 0</wrench>
+        </link>
+        <link name='front_left_2_Link'>
+          <pose frame=''>0.102274 0.774536 0.303245 -3.03156 0.201536 -1.30634</pose>
+          <velocity>0.00612 -0.041503 0.031957 0.147138 0.020388 0.000373</velocity>
+          <acceleration>-0.012054 0.113406 -0.070035 1.78528 1.4999 -0.936359</acceleration>
+          <wrench>-0.050823 0.478165 -0.295295 0 -0 0</wrench>
+        </link>
+        <link name='front_left_3_Link'>
+          <pose frame=''>0.180446 0.483736 0.241708 -3.09745 -0.225274 1.12917</pose>
+          <velocity>0.009783 -0.035073 -0.013548 0.1505 0.028814 0.007271</velocity>
+          <acceleration>-0.005203 0.051917 -0.135918 -1.1041 0.863924 -1.69331</acceleration>
+          <wrench>-0.002487 0.024811 -0.064954 0 -0 0</wrench>
+        </link>
+        <link name='front_right_1_Link'>
+          <pose frame=''>0.075306 0.785264 0.4504 1.72723 0.473062 -1.09622</pose>
+          <velocity>0.006447 -0.054998 0.033062 0.096217 0.001832 -0.017555</velocity>
+          <acceleration>-0.038751 0.402468 -0.188624 -2.08604 0.338074 1.73835</acceleration>
+          <wrench>-0.113273 1.17646 -0.55137 0 -0 0</wrench>
+        </link>
+        <link name='front_right_2_Link'>
+          <pose frame=''>0.075304 0.785265 0.450401 -0.09559 0.487852 -1.63126</pose>
+          <velocity>0.006443 -0.055018 0.033047 0.096091 0.002546 -0.018598</velocity>
+          <acceleration>-0.057545 0.3727 -0.100549 1.80123 1.31791 -2.51799</acceleration>
+          <wrench>-0.242629 1.57144 -0.42395 0 -0 0</wrench>
+        </link>
+        <link name='front_right_3_Link'>
+          <pose frame=''>0.058864 0.513675 0.306027 0.495985 0.020659 0.103167</pose>
+          <velocity>0.001054 -0.040678 0.007016 0.096275 0.002121 -0.017882</velocity>
+          <acceleration>-0.058481 0.341853 -0.083068 -2.57672 0.536387 -0.294245</acceleration>
+          <wrench>-0.027947 0.163368 -0.039697 0 -0 0</wrench>
+        </link>
+        <link name='rear_left_1_Link'>
+          <pose frame=''>-0.675754 0.442976 0.184792 -1.42699 -0.255507 -1.20456</pose>
+          <velocity>1.2e-05 -0.016366 0.001548 0.089716 -0.001165 -0.018445</velocity>
+          <acceleration>0.006588 0.038257 -0.001776 1.69131 -1.01576 2.34077</acceleration>
+          <wrench>0.019257 0.11183 -0.005191 0 -0 0</wrench>
+        </link>
+        <link name='rear_left_2_Link'>
+          <pose frame=''>-0.675757 0.442985 0.184804 2.97022 -0.238026 -0.051196</pose>
+          <velocity>7.7e-05 -0.016324 0.001558 0.090302 -0.001581 -0.021125</velocity>
+          <acceleration>0.011427 0.087632 -0.009856 -1.35492 0.437465 -1.20841</acceleration>
+          <wrench>0.048181 0.369487 -0.041558 0 -0 0</wrench>
+        </link>
+        <link name='rear_left_3_Link'>
+          <pose frame=''>-0.37684 0.427673 0.257431 -2.90567 -0.174392 -1.62998</pose>
+          <velocity>-0.000361 -0.029185 0.000629 0.090779 -0.001917 -0.023316</velocity>
+          <acceleration>0.041911 0.106713 0.075972 -0.266411 -0.280687 0.194836</acceleration>
+          <wrench>0.020029 0.050997 0.036306 0 -0 0</wrench>
+        </link>
+        <link name='rear_right_1_Link'>
+          <pose frame=''>-0.702737 0.453711 0.331949 1.71414 -0.241589 -1.20248</pose>
+          <velocity>0.000399 -0.030002 0.002616 0.10144 0.004211 -0.016741</velocity>
+          <acceleration>-0.028345 0.297365 -0.044267 -0.030153 1.33875 0.36172</acceleration>
+          <wrench>-0.082855 0.869231 -0.129397 0 -0 0</wrench>
+        </link>
+        <link name='rear_right_2_Link'>
+          <pose frame=''>-0.702739 0.453711 0.331948 -0.119478 -0.254045 -0.214102</pose>
+          <velocity>0.0004 -0.03 0.002627 0.101495 0.003898 -0.01692</velocity>
+          <acceleration>-0.052462 0.341439 0.031614 -2.05119 -0.503765 -0.530012</acceleration>
+          <wrench>-0.221198 1.43963 0.133298 0 -0 0</wrench>
+        </link>
+        <link name='rear_right_3_Link'>
+          <pose frame=''>-0.411439 0.390375 0.409358 0.214927 -0.181198 -1.54043</pose>
+          <velocity>-0.000413 -0.042784 -0.004933 0.101035 0.00424 -0.01496</velocity>
+          <acceleration>-0.17372 0.490236 0.27073 -2.83708 -0.281639 -3.04892</acceleration>
+          <wrench>-0.083019 0.234278 0.129379 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Untitled'>
+        <pose frame=''>0.76106 0.433227 0.12 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Untitled::link_1'>
+          <pose frame=''>0.76106 0.433227 0.12 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='frc2016_moat'>
         <pose frame=''>-1.35955 -0.4274 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -1209,16 +1343,6 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='operation_box_2'>
-        <pose frame=''>-2.93246 -0.922085 0.105 0 0 -3e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2.93246 -0.922085 0.105 0 0 -3e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.004527 -0.128948 0.096688 1.23073 0.0291 4.3e-05</acceleration>
-          <wrench>0.000905 -0.02579 0.019338 0 -0 0</wrench>
-        </link>
-      </model>
       <model name='test_terrian_slope_and_stairs_0'>
         <pose frame=''>6.83992 -1.74389 -0.016855 0 0 -1.57538</pose>
         <scale>1 1 1</scale>
@@ -1245,7 +1369,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>0.730864 -2.72521 1.63582 0 0.377709 2.24401</pose>
+        <pose frame=''>0.199913 7.14046 2.72518 -0 0.113498 -1.64992</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -3795,44 +3919,2162 @@
       </link>
       <pose frame=''>-1.35955 -0.4274 0 0 -0 0</pose>
     </model>
-    <model name='operation_box_2'>
-      <link name='link'>
+    <model name='/'>
+      <link name='base_link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
-          <mass>0.2</mass>
+          <pose frame=''>0.007114 -0.000621 0.02676 0 -0 0</pose>
+          <mass>9.3657</mass>
           <inertia>
-            <ixx>0.166667</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.166667</iyy>
-            <iyz>0</iyz>
-            <izz>0.166667</izz>
+            <ixx>0.300843</ixx>
+            <ixy>-2.14635e-06</ixy>
+            <ixz>0.000147963</ixz>
+            <iyy>2.05646</iyy>
+            <iyz>-0.000160907</iyz>
+            <izz>2.05861</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-        <visual name='visual'>
+        <collision name='base_link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>10</mu>
+                <mu2>10</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__arm_base_link_collision_1'>
+          <pose frame=''>0 0 0.11 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__imu_link_collision_2'>
+          <pose frame=''>0.13 0 0.12 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.21 0.21 0.21</size>
+              <size>0.06 0.06 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__arm_base_link_visual_1'>
+          <pose frame=''>0 0 0.11 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__imu_link_visual_2'>
+          <pose frame=''>0.13 0 0.12 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.06 0.06 0.02</size>
             </box>
           </geometry>
           <material>
             <script>
-              <name>Gazebo/Grey</name>
+              <name>Gazebo/Blue</name>
               <uri>file://media/materials/scripts/gazebo.material</uri>
             </script>
-            <ambient>0.2 0.1 0.2 1</ambient>
-            <diffuse>0.7 0.9 0 1</diffuse>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <gravity>1</gravity>
+        <sensor name='imu' type='imu'>
+          <always_on>1</always_on>
+          <update_rate>200</update_rate>
+          <visualize>1</visualize>
+          <topic>__default_topic__</topic>
+          <plugin name='imu_plugin' filename='libgazebo_ros_imu_sensor.so'>
+            <topicName>imu</topicName>
+            <bodyName>imu_link</bodyName>
+            <updateRateHZ>200.0</updateRateHZ>
+            <gaussianNoise>1e-06</gaussianNoise>
+            <xyzOffset>0 0 0</xyzOffset>
+            <rpyOffset>0 0 0</rpyOffset>
+            <frameName>imu_link</frameName>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose frame=''>0.13 0 0.12 0 -0 0</pose>
+        </sensor>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Link1'>
+        <pose frame=''>0 0 0.11 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-1e-06 -0.000817 0.22221 0 -0 0</pose>
+          <mass>1.835</mass>
+          <inertia>
+            <ixx>0.00091458</ixx>
+            <ixy>1.0429e-07</ixy>
+            <ixz>-1.9214e-10</ixz>
+            <iyy>0.00078906</iyy>
+            <iyz>-3.0542e-06</iyz>
+            <izz>0.00046485</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link1_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link1.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link1_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link1.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='1joint' type='revolute'>
+        <child>Link1</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>100</effort>
+            <velocity>20</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='Link2'>
+        <pose frame=''>3.9e-05 0 0.35812 -1.5708 0 0.001064</pose>
+        <inertial>
+          <pose frame=''>0.001497 -0.10428 0.009355 0 -0 0</pose>
+          <mass>1.5903</mass>
+          <inertia>
+            <ixx>0.0013333</ixx>
+            <ixy>1.4113e-05</ixy>
+            <ixz>3.7731e-06</ixz>
+            <iyy>0.00038012</iyy>
+            <iyz>-0.00025532</iyz>
+            <izz>0.0012777</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link2_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link2.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link2_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link2.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='2joint' type='revolute'>
+        <child>Link2</child>
+        <parent>Link1</parent>
+        <axis>
+          <xyz>-0.001064 0.999999 -4e-06</xyz>
+          <limit>
+            <lower>-1.9</lower>
+            <upper>1.9</upper>
+            <effort>100</effort>
+            <velocity>20</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='Link3'>
+        <pose frame=''>0 -0 0.358004 0 0.01473 0.001063</pose>
+        <inertial>
+          <pose frame=''>1e-05 -0.002389 0.27731 0 -0 0</pose>
+          <mass>1.453</mass>
+          <inertia>
+            <ixx>0.00069611</ixx>
+            <ixy>2.3457e-07</ixy>
+            <ixz>-1.9566e-08</ixz>
+            <iyy>0.0006322</iyy>
+            <iyz>1.2171e-05</iyz>
+            <izz>0.00031231</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link3_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link3.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link3_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link3.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='3joint' type='revolute'>
+        <child>Link3</child>
+        <parent>Link2</parent>
+        <axis>
+          <xyz>0.01473 1.6e-05 0.999892</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>40</effort>
+            <velocity>20</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='Link4'>
+        <pose frame=''>0.004492 5e-06 0.662971 -1.57074 0.01473 0.005004</pose>
+        <inertial>
+          <pose frame=''>-0.001374 -0.093336 0.0093 0 -0 0</pose>
+          <mass>1.151</mass>
+          <inertia>
+            <ixx>0.00095508</ixx>
+            <ixy>-1.0307e-05</ixy>
+            <ixz>-2.5138e-06</ixz>
+            <iyy>0.00025405</iyy>
+            <iyz>-0.00017191</iyz>
+            <izz>0.0009263</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link4_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link4.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link4_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link4.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='4joint' type='revolute'>
+        <child>Link4</child>
+        <parent>Link3</parent>
+        <axis>
+          <xyz>-0.005004 0.999987 5.4e-05</xyz>
+          <limit>
+            <lower>-1.9</lower>
+            <upper>1.9</upper>
+            <effort>40</effort>
+            <velocity>20</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='Link5'>
+        <pose frame=''>0.004492 5e-06 0.662971 -4.2e-05 -0 0.005004</pose>
+        <inertial>
+          <pose frame=''>-0.000351 -0.003019 0.26208 0 -0 0</pose>
+          <mass>0.965</mass>
+          <inertia>
+            <ixx>0.00066636</ixx>
+            <ixy>-4.914e-06</ixy>
+            <ixz>2.9088e-06</ixz>
+            <iyy>0.00062822</iyy>
+            <iyz>2.2513e-05</iyz>
+            <izz>0.00021695</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link5_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link5.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link5_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link5.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='5joint' type='revolute'>
+        <child>Link5</child>
+        <parent>Link4</parent>
+        <axis>
+          <xyz>0 4.2e-05 1</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>15</effort>
+            <velocity>30</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='Link6'>
+        <pose frame=''>0.004492 -0 0.968971 -1.57074 -5e-06 -0.121006</pose>
+        <inertial>
+          <pose frame=''>3.2e-05 -0.097036 0.00702 0 -0 0</pose>
+          <mass>0.965</mass>
+          <inertia>
+            <ixx>0.00082771</ixx>
+            <ixy>-2.5635e-07</ixy>
+            <ixz>2.8367e-08</ixz>
+            <iyy>0.00020369</iyy>
+            <iyz>-0.00012311</iyz>
+            <izz>0.00081164</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link6_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link6.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link6_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link6.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='6joint' type='revolute'>
+        <child>Link6</child>
+        <parent>Link5</parent>
+        <axis>
+          <xyz>0.120711 0.992688 5.5e-05</xyz>
+          <limit>
+            <lower>-1.9</lower>
+            <upper>1.9</upper>
+            <effort>15</effort>
+            <velocity>30</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='Link7'>
+        <pose frame=''>0.004492 -0 0.968971 5.8e-05 -5e-06 -0.121006</pose>
+        <inertial>
+          <pose frame=''>-0.004689 -0.000566 0.237427 0 -0 0</pose>
+          <mass>2.169</mass>
+          <inertia>
+            <ixx>0.00381127</ixx>
+            <ixy>-1.92455e-05</ixy>
+            <ixz>0.000390571</ixz>
+            <iyy>0.00396697</iyy>
+            <iyz>4.77925e-05</iyz>
+            <izz>0.000557446</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link7_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link7.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='Link7_fixed_joint_lump__sensor_link_collision_1'>
+          <pose frame=''>0 0 0.192 0 -0 0.12101</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/sensor_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='Link7_fixed_joint_lump__finger_Link1_collision_2'>
+          <pose frame=''>0 0 0.216 0 -0 0.12101</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/finger_Link1.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='Link7_fixed_joint_lump__finger_Link2_collision_3'>
+          <pose frame=''>-0.005694 -0.000692 0.256 0 -0 0.12101</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/finger_Link2.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link7_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/Link7.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Link7_fixed_joint_lump__sensor_link_visual_1'>
+          <pose frame=''>0 0 0.192 0 -0 0.12101</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/sensor_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Link7_fixed_joint_lump__finger_Link1_visual_2'>
+          <pose frame=''>0 0 0.216 0 -0 0.12101</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/finger_Link1.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='Link7_fixed_joint_lump__finger_Link2_visual_3'>
+          <pose frame=''>-0.005694 -0.000692 0.256 0 -0 0.12101</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/quadruped_locomotion/quadrupedarmkinematics/urdf/my_arm/meshes/finger_Link2.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name='7joint' type='revolute'>
+        <child>Link7</child>
+        <parent>Link6</parent>
+        <axis>
+          <xyz>-1.2e-05 -5.7e-05 1</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>15</effort>
+            <velocity>20</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='front_left_1_Link'>
+        <pose frame=''>0.427 0.075 -0.0095 3.14159 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.000688 0.10488 -0.003776 0 -0 0</pose>
+          <mass>2.9231</mass>
+          <inertia>
+            <ixx>0.00482</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.007868</iyy>
+            <iyz>0</iyz>
+            <izz>0.008241</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_left_1_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_left_1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='front_left_1_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_left_1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_left_1_joint' type='revolute'>
+        <child>front_left_1_Link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>1 0 -4e-06</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>100</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='front_left_2_Link'>
+        <pose frame=''>0.427 0.075 -0.0095 1.57079 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.18475 3.2e-05 0.12906 0 -0 0</pose>
+          <mass>4.2164</mass>
+          <inertia>
+            <ixx>0.006286</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.028156</iyy>
+            <iyz>0</iyz>
+            <izz>0.029242</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_left_2_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_left_2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='front_left_2_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_left_2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_left_2_joint' type='revolute'>
+        <child>front_left_2_Link</child>
+        <parent>front_left_1_Link</parent>
+        <axis>
+          <xyz>-4e-06 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='front_left_3_Link'>
+        <pose frame=''>0.426999 0.075 -0.3175 1.57079 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.211222 0.000185 0.225783 0 -0 0</pose>
+          <mass>0.47789</mass>
+          <inertia>
+            <ixx>0.000399798</ixx>
+            <ixy>7.88416e-07</ixy>
+            <ixz>-2.00827e-05</ixz>
+            <iyy>0.00674419</iyy>
+            <iyz>3.12672e-08</iyz>
+            <izz>0.00702739</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_left_3_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_left_3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='front_left_3_Link_fixed_joint_lump__lf_foot_Link_collision_1'>
+          <pose frame=''>0.308 0 0.23 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_lf_foot_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1000</kp>
+                <kd>100</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1000</mu>
+                <mu2>1000</mu2>
+                <fdir1>0 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>1</max_contacts>
+        </collision>
+        <visual name='front_left_3_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_left_3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='front_left_3_Link_fixed_joint_lump__lf_foot_Link_visual_1'>
+          <pose frame=''>0.308 0 0.23 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_lf_foot_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <gravity>0</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <sensor name='lf_foot_contact_sensor' type='contact'>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>front_left_3_Link_fixed_joint_lump__lf_foot_Link_collision_1</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <plugin name='lf_foot_gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
+            <alwaysOn>true</alwaysOn>
+            <frameName>lf_foot_Link</frameName>
+            <updateRate>1000.0</updateRate>
+            <bumperTopicName>lf_foot_bumper</bumperTopicName>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose frame=''>0.308 0 0.23 0 -0 0</pose>
+        </sensor>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_left_3_joint' type='revolute'>
+        <child>front_left_3_Link</child>
+        <parent>front_left_2_Link</parent>
+        <axis>
+          <xyz>-4e-06 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='front_right_1_Link'>
+        <pose frame=''>0.427 -0.075 -0.0095 7e-06 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>-0.000688 0.104882 0.003776 0 -0 0</pose>
+          <mass>2.92311</mass>
+          <inertia>
+            <ixx>0.00482</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.007868</iyy>
+            <iyz>0</iyz>
+            <izz>0.008241</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_right_1_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_right_1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='front_right_1_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_right_1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_right_1_joint' type='revolute'>
+        <child>front_right_1_Link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>-1 7e-06 4e-06</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>100</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='front_right_2_Link'>
+        <pose frame=''>0.427 -0.075 -0.0095 -1.57079 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.184747 3.2e-05 0.129056 0 -0 0</pose>
+          <mass>4.21636</mass>
+          <inertia>
+            <ixx>0.006286</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.028156</iyy>
+            <iyz>0</iyz>
+            <izz>0.029242</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_right_2_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_right_2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='front_right_2_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_right_2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_right_2_joint' type='revolute'>
+        <child>front_right_2_Link</child>
+        <parent>front_right_1_Link</parent>
+        <axis>
+          <xyz>-4e-06 -1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='front_right_3_Link'>
+        <pose frame=''>0.426999 -0.075 -0.3175 -1.57079 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.211225 0.000185 0.22509 0 -0 0</pose>
+          <mass>0.477889</mass>
+          <inertia>
+            <ixx>0.000399746</ixx>
+            <ixy>7.88398e-07</ixy>
+            <ixz>1.94248e-05</ixz>
+            <iyy>0.00674411</iyy>
+            <iyz>-3.02437e-08</iyz>
+            <izz>0.00702737</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_right_3_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_right_3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='front_right_3_Link_fixed_joint_lump__rf_foot_Link_collision_1'>
+          <pose frame=''>0.308 0 0.22053 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Orgin_rf_foot_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1000</kp>
+                <kd>100</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1000</mu>
+                <mu2>1000</mu2>
+                <fdir1>0 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>1</max_contacts>
+        </collision>
+        <visual name='front_right_3_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_front_right_3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='front_right_3_Link_fixed_joint_lump__rf_foot_Link_visual_1'>
+          <pose frame=''>0.308 0 0.22053 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Orgin_rf_foot_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <gravity>0</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <sensor name='rf_foot_contact_sensor' type='contact'>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>front_right_3_Link_fixed_joint_lump__rf_foot_Link_collision_1</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <plugin name='rf_foot_gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
+            <alwaysOn>true</alwaysOn>
+            <frameName>rf_foot_Link</frameName>
+            <updateRate>1000.0</updateRate>
+            <bumperTopicName>rf_foot_bumper</bumperTopicName>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose frame=''>0.308 0 0.22053 0 -0 0</pose>
+        </sensor>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_right_3_joint' type='revolute'>
+        <child>front_right_3_Link</child>
+        <parent>front_right_2_Link</parent>
+        <axis>
+          <xyz>-4e-06 -1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='rear_left_1_Link'>
+        <pose frame=''>-0.427 0.075 -0.0095 3.14159 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>-0.000688 0.10488 0.003776 0 -0 0</pose>
+          <mass>2.9231</mass>
+          <inertia>
+            <ixx>0.00482</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.007868</iyy>
+            <iyz>0</iyz>
+            <izz>0.008241</izz>
+          </inertia>
+        </inertial>
+        <collision name='rear_left_1_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_left_1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='rear_left_1_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_left_1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rear_left_1_joint' type='revolute'>
+        <child>rear_left_1_Link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>1 0 -4e-06</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>100</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='rear_left_2_Link'>
+        <pose frame=''>-0.427 0.075 -0.0095 1.57079 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.184717 3.2e-05 0.129056 0 -0 0</pose>
+          <mass>4.21636</mass>
+          <inertia>
+            <ixx>0.006286</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.028156</iyy>
+            <iyz>0</iyz>
+            <izz>0.029242</izz>
+          </inertia>
+        </inertial>
+        <collision name='rear_left_2_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_left_2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='rear_left_2_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_left_2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rear_left_2_joint' type='revolute'>
+        <child>rear_left_2_Link</child>
+        <parent>rear_left_1_Link</parent>
+        <axis>
+          <xyz>-4e-06 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='rear_left_3_Link'>
+        <pose frame=''>-0.427001 0.075 -0.3175 1.57079 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.211225 0.000185 0.225785 0 -0 0</pose>
+          <mass>0.477889</mass>
+          <inertia>
+            <ixx>0.000399797</ixx>
+            <ixy>7.88398e-07</ixy>
+            <ixz>-2.00743e-05</ixz>
+            <iyy>0.00674416</iyy>
+            <iyz>3.12549e-08</iyz>
+            <izz>0.00702737</izz>
+          </inertia>
+        </inertial>
+        <collision name='rear_left_3_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_left_3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='rear_left_3_Link_fixed_joint_lump__lh_foot_Link_collision_1'>
+          <pose frame=''>0.308 0 0.23 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rl_foot_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1000</kp>
+                <kd>100</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1000</mu>
+                <mu2>1000</mu2>
+                <fdir1>0 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>1</max_contacts>
+        </collision>
+        <visual name='rear_left_3_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_left_3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='rear_left_3_Link_fixed_joint_lump__lh_foot_Link_visual_1'>
+          <pose frame=''>0.308 0 0.23 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rl_foot_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <gravity>0</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <sensor name='lh_foot_contact_sensor' type='contact'>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>rear_left_3_Link_fixed_joint_lump__lh_foot_Link_collision_1</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <plugin name='lh_foot_gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
+            <alwaysOn>true</alwaysOn>
+            <frameName>lh_foot_Link</frameName>
+            <updateRate>1000.0</updateRate>
+            <bumperTopicName>lh_foot_bumper</bumperTopicName>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose frame=''>0.308 0 0.23 0 -0 0</pose>
+        </sensor>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rear_left_3_joint' type='revolute'>
+        <child>rear_left_3_Link</child>
+        <parent>rear_left_2_Link</parent>
+        <axis>
+          <xyz>-4e-06 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='rear_right_1_Link'>
+        <pose frame=''>-0.427 -0.075 -0.0095 7e-06 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.000688 0.104882 0.003776 0 -0 0</pose>
+          <mass>2.92311</mass>
+          <inertia>
+            <ixx>0.00482</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.007868</iyy>
+            <iyz>0</iyz>
+            <izz>0.008241</izz>
+          </inertia>
+        </inertial>
+        <collision name='rear_right_1_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_right_1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='rear_right_1_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_right_1_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rear_right_1_joint' type='revolute'>
+        <child>rear_right_1_Link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>-1 7e-06 4e-06</xyz>
+          <limit>
+            <lower>-3</lower>
+            <upper>3</upper>
+            <effort>100</effort>
+            <velocity>10</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='rear_right_2_Link'>
+        <pose frame=''>-0.427 -0.075 -0.0095 -1.57079 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.184747 3.2e-05 0.129056 0 -0 0</pose>
+          <mass>4.21636</mass>
+          <inertia>
+            <ixx>0.006286</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.028156</iyy>
+            <iyz>0</iyz>
+            <izz>0.029242</izz>
+          </inertia>
+        </inertial>
+        <collision name='rear_right_2_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_right_2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='rear_right_2_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_right_2_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rear_right_2_joint' type='revolute'>
+        <child>rear_right_2_Link</child>
+        <parent>rear_right_1_Link</parent>
+        <axis>
+          <xyz>-4e-06 -1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <link name='rear_right_3_Link'>
+        <pose frame=''>-0.427001 -0.075 -0.3175 -1.57079 1.57079 3.14159</pose>
+        <inertial>
+          <pose frame=''>0.211225 0.000185 0.22509 0 -0 0</pose>
+          <mass>0.477889</mass>
+          <inertia>
+            <ixx>0.000399746</ixx>
+            <ixy>7.88398e-07</ixy>
+            <ixz>1.94247e-05</ixz>
+            <iyy>0.00674411</iyy>
+            <iyz>-3.02435e-08</iyz>
+            <izz>0.00702737</izz>
+          </inertia>
+        </inertial>
+        <collision name='rear_right_3_Link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_right_3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='rear_right_3_Link_fixed_joint_lump__rh_foot_Link_collision_1'>
+          <pose frame=''>0.308 0 0.22053 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rr_foot_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1000</kp>
+                <kd>100</kd>
+                <max_vel>0</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1000</mu>
+                <mu2>1000</mu2>
+                <fdir1>0 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>1</max_contacts>
+        </collision>
+        <visual name='rear_right_3_Link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rear_right_3_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>__default__</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='rear_right_3_Link_fixed_joint_lump__rh_foot_Link_visual_1'>
+          <pose frame=''>0.308 0 0.22053 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/kun/catkin_ws_dependency/src/simple_dog_simulation/simpledog/meshes/quadruped/Origin_rr_foot_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <gravity>0</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <sensor name='rh_foot_contact_sensor' type='contact'>
+          <update_rate>1000</update_rate>
+          <contact>
+            <collision>rear_right_3_Link_fixed_joint_lump__rh_foot_Link_collision_1</collision>
+            <topic>__default_topic__</topic>
+          </contact>
+          <plugin name='rh_foot_gazebo_ros_bumper_controller' filename='libgazebo_ros_bumper.so'>
+            <alwaysOn>true</alwaysOn>
+            <frameName>rh_foot_Link</frameName>
+            <updateRate>1000.0</updateRate>
+            <bumperTopicName>rh_foot_bumper</bumperTopicName>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose frame=''>0.308 0 0.22053 0 -0 0</pose>
+        </sensor>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rear_right_3_joint' type='revolute'>
+        <child>rear_right_3_Link</child>
+        <parent>rear_right_2_Link</parent>
+        <axis>
+          <xyz>-4e-06 -1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+        <physics>
+          <provide_feedback>1</provide_feedback>
+          <ode>
+            <provide_feedback>1</provide_feedback>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <static>0</static>
+      <plugin name='balance_controller' filename='librobot_state_gazebo_ros_control_plugin.so'>
+        <robotNamespace>/</robotNamespace>
+        <robotSimType>balance_controller/SimRobotStateHardwareInterface</robotSimType>
+      </plugin>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+    </model>
+    <model name='Untitled'>
+      <link name='Untitled::link_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1</iyy>
+            <iyz>0</iyz>
+            <izz>0.1</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <gravity>1</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.12</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
             <specular>0.01 0.01 0.01 1</specular>
             <emissive>0 0 0 1</emissive>
             <shader type='vertex'>
               <normal_map>__default__</normal_map>
             </shader>
           </material>
-          <pose frame=''>0 0 0 0 -0 0</pose>
           <cast_shadows>1</cast_shadows>
           <transparency>0</transparency>
         </visual>
@@ -3841,9 +6083,9 @@
           <max_contacts>10</max_contacts>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
-            <box>
-              <size>0.21 0.21 0.21</size>
-            </box>
+            <sphere>
+              <radius>0.12</radius>
+            </sphere>
           </geometry>
           <surface>
             <friction>
@@ -3894,7 +6136,7 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-2.93246 -0.922085 0.104999 -0 2e-06 -2.9e-05</pose>
+      <pose frame=''>1 -1 0.5 0 -0 0</pose>
     </model>
   </world>
 </sdf>

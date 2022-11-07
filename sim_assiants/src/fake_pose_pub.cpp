@@ -49,6 +49,11 @@ FakePose::FakePose(ros::NodeHandle& nodehandle)
     robot_state_.rh_leg_joints.position.resize(3);
     robot_state_.rh_leg_joints.velocity.resize(3);
     robot_state_.rh_leg_joints.effort.resize(3);
+
+    robot_state_.arm_joints.name.resize(7);
+    robot_state_.arm_joints.position.resize(7);
+    robot_state_.arm_joints.velocity.resize(7);
+    robot_state_.arm_joints.effort.resize(7);
     //    message_filters::Subscriber<gazebo_msgs::ModelStates> timeSeqSub_(nodeHandle_,"/gazebo/model_states", 1);
 //    message_filters::TimeSequencer<gazebo_msgs::ModelStates> seq(timeSeqSub_, ros::Duration(0.1), ros::Duration(0.01),10,nodeHandle_);
 //    seq.registerCallback(&FakePose::modelStatesCallback,this);
@@ -62,62 +67,80 @@ FakePose::~FakePose(){};
 
 void FakePose::jointStatesCallback(const sensor_msgs::JointState::ConstPtr& joint_states)
 {
-  gazebo_time = joint_states->header.stamp;
+    std::cout << "in the joint state call back" << std::endl;
+    gazebo_time = joint_states->header.stamp;
+
+    robot_state_.arm_joints.header = joint_states->header;
+
+    for (unsigned int i = 0; i < 7; i++) {
+        robot_state_.arm_joints.name[i] = joint_states->name.at(i);
+        robot_state_.arm_joints.position[i] = joint_states->position[i];
+        robot_state_.arm_joints.velocity[i] = joint_states->velocity[i];
+        robot_state_.arm_joints.effort[i] = joint_states->effort[i];
+    }
+
+
   robot_state_.lf_leg_joints.header = joint_states->header;
   robot_state_.lf_leg_joints.name[0] = "front_left_1_joint";
-  robot_state_.lf_leg_joints.position[0] = joint_states->position[0];
-  robot_state_.lf_leg_joints.velocity[0] = joint_states->velocity[0];
-  robot_state_.lf_leg_joints.effort[0] = joint_states->effort[0];
+  robot_state_.lf_leg_joints.position[0] = joint_states->position[7];
+  robot_state_.lf_leg_joints.velocity[0] = joint_states->velocity[7];
+  robot_state_.lf_leg_joints.effort[0] = joint_states->effort[7];
   robot_state_.lf_leg_joints.name[1] = "front_left_2_joint";
-  robot_state_.lf_leg_joints.position[1] = joint_states->position[1];
-  robot_state_.lf_leg_joints.velocity[1] = joint_states->velocity[1];
-  robot_state_.lf_leg_joints.effort[1] = joint_states->effort[1];
+  robot_state_.lf_leg_joints.position[1] = joint_states->position[8];
+  robot_state_.lf_leg_joints.velocity[1] = joint_states->velocity[8];
+  robot_state_.lf_leg_joints.effort[1] = joint_states->effort[8];
   robot_state_.lf_leg_joints.name[2] = "front_left_3_joint";
-  robot_state_.lf_leg_joints.position[2] = joint_states->position[2];
-  robot_state_.lf_leg_joints.velocity[2] = joint_states->velocity[2];
-  robot_state_.lf_leg_joints.effort[2] = joint_states->effort[2];
+  robot_state_.lf_leg_joints.position[2] = joint_states->position[9];
+  robot_state_.lf_leg_joints.velocity[2] = joint_states->velocity[9];
+  robot_state_.lf_leg_joints.effort[2] = joint_states->effort[9];
+
 
   robot_state_.rf_leg_joints.header = joint_states->header;
   robot_state_.rf_leg_joints.name[0] = "front_right_1_joint";
-  robot_state_.rf_leg_joints.position[0] = joint_states->position[3];
-  robot_state_.rf_leg_joints.velocity[0] = joint_states->velocity[3];
-  robot_state_.rf_leg_joints.effort[0] = joint_states->effort[3];
+  robot_state_.rf_leg_joints.position[0] = joint_states->position[10];
+  robot_state_.rf_leg_joints.velocity[0] = joint_states->velocity[10];
+  robot_state_.rf_leg_joints.effort[0] = joint_states->effort[10];
   robot_state_.rf_leg_joints.name[1] = "front_right_2_joint";
-  robot_state_.rf_leg_joints.position[1] = joint_states->position[4];
-  robot_state_.rf_leg_joints.velocity[1] = joint_states->velocity[4];
-  robot_state_.rf_leg_joints.effort[1] = joint_states->effort[4];
+  robot_state_.rf_leg_joints.position[1] = joint_states->position[11];
+  robot_state_.rf_leg_joints.velocity[1] = joint_states->velocity[11];
+  robot_state_.rf_leg_joints.effort[1] = joint_states->effort[11];
   robot_state_.rf_leg_joints.name[2] = "front_right_3_joint";
-  robot_state_.rf_leg_joints.position[2] = joint_states->position[5];
-  robot_state_.rf_leg_joints.velocity[2] = joint_states->velocity[5];
-  robot_state_.rf_leg_joints.effort[2] = joint_states->effort[5];
+  robot_state_.rf_leg_joints.position[2] = joint_states->position[12];
+  robot_state_.rf_leg_joints.velocity[2] = joint_states->velocity[12];
+  robot_state_.rf_leg_joints.effort[2] = joint_states->effort[12];
+
 
   robot_state_.lh_leg_joints.header = joint_states->header;
   robot_state_.lh_leg_joints.name[0] = "rear_left_1_joint";
-  robot_state_.lh_leg_joints.position[0] = joint_states->position[6];
-  robot_state_.lh_leg_joints.velocity[0] = joint_states->velocity[6];
-  robot_state_.lh_leg_joints.effort[0] = joint_states->effort[6];
+  robot_state_.lh_leg_joints.position[0] = joint_states->position[13];
+  robot_state_.lh_leg_joints.velocity[0] = joint_states->velocity[13];
+  robot_state_.lh_leg_joints.effort[0] = joint_states->effort[13];
   robot_state_.lh_leg_joints.name[1] = "rear_left_2_joint";
-  robot_state_.lh_leg_joints.position[1] = joint_states->position[7];
-  robot_state_.lh_leg_joints.velocity[1] = joint_states->velocity[7];
-  robot_state_.lh_leg_joints.effort[1] = joint_states->effort[7];
+  robot_state_.lh_leg_joints.position[1] = joint_states->position[14];
+  robot_state_.lh_leg_joints.velocity[1] = joint_states->velocity[14];
+  robot_state_.lh_leg_joints.effort[1] = joint_states->effort[14];
   robot_state_.lh_leg_joints.name[2] = "rear_left_3_joint";
-  robot_state_.lh_leg_joints.position[2] = joint_states->position[8];
-  robot_state_.lh_leg_joints.velocity[2] = joint_states->velocity[8];
-  robot_state_.lh_leg_joints.effort[2] = joint_states->effort[8];
+  robot_state_.lh_leg_joints.position[2] = joint_states->position[15];
+  robot_state_.lh_leg_joints.velocity[2] = joint_states->velocity[15];
+  robot_state_.lh_leg_joints.effort[2] = joint_states->effort[15];
+
 
   robot_state_.rh_leg_joints.header = joint_states->header;
   robot_state_.rh_leg_joints.name[0] = "rear_right_1_joint";
-  robot_state_.rh_leg_joints.position[0] = joint_states->position[9];
-  robot_state_.rh_leg_joints.velocity[0] = joint_states->velocity[9];
-  robot_state_.rh_leg_joints.effort[0] = joint_states->effort[9];
+  robot_state_.rh_leg_joints.position[0] = joint_states->position[16];
+  robot_state_.rh_leg_joints.velocity[0] = joint_states->velocity[16];
+  robot_state_.rh_leg_joints.effort[0] = joint_states->effort[16];
   robot_state_.rh_leg_joints.name[1] = "rear_right_2_joint";
-  robot_state_.rh_leg_joints.position[1] = joint_states->position[10];
-  robot_state_.rh_leg_joints.velocity[1] = joint_states->velocity[10];
-  robot_state_.rh_leg_joints.effort[1] = joint_states->effort[10];
+  robot_state_.rh_leg_joints.position[1] = joint_states->position[17];
+  robot_state_.rh_leg_joints.velocity[1] = joint_states->velocity[17];
+  robot_state_.rh_leg_joints.effort[1] = joint_states->effort[17];
   robot_state_.rh_leg_joints.name[2] = "rear_right_3_joint";
-  robot_state_.rh_leg_joints.position[2] = joint_states->position[11];
-  robot_state_.rh_leg_joints.velocity[2] = joint_states->velocity[11];
-  robot_state_.rh_leg_joints.effort[2] = joint_states->effort[11];
+  robot_state_.rh_leg_joints.position[2] = joint_states->position[18];
+  robot_state_.rh_leg_joints.velocity[2] = joint_states->velocity[18];
+  robot_state_.rh_leg_joints.effort[2] = joint_states->effort[18];
+
+
+
 }
 
 void FakePose::footContactsCallback(const sim_assiants::FootContacts::ConstPtr& foot_contacts)
@@ -144,8 +167,8 @@ void FakePose::modelStatesCallback(const gazebo_msgs::ModelStates::ConstPtr& mod
     ROS_INFO("Recieved a model states");
 //    geometry_msgs::Pose base_pose = *(modelStatesMsg->pose.end());
 //    geometry_msgs::Twist base_twist =*(modelStatesMsg->twist.end());
-      geometry_msgs::Pose base_pose = modelStatesMsg->pose[10];
-      geometry_msgs::Twist base_twist =modelStatesMsg->twist[10];
+      geometry_msgs::Pose base_pose = modelStatesMsg->pose[11];//11?
+      geometry_msgs::Twist base_twist =modelStatesMsg->twist[11];//11?
       base_twist.linear.x *= real_time_factor;
       base_twist.linear.y *= real_time_factor;
       base_twist.linear.z *= real_time_factor;

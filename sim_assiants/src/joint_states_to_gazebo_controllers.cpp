@@ -42,46 +42,61 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "joint_command_interface");
     ros::NodeHandle nh;
-//    joint_group_positions.data.resize(19);
-    // joint_group_positions.data[0] = 0;
-    // joint_group_positions.data[1] = 1.4;
-    // joint_group_positions.data[2] = -2.75;
-    // joint_group_positions.data[3] = 0;
-    // joint_group_positions.data[4] = -1.4;
-    // joint_group_positions.data[5] = 2.75;
-    // joint_group_positions.data[6] = 0;
-    // joint_group_positions.data[7] = 1.4;
-    // joint_group_positions.data[8] = -2.75;
-    // joint_group_positions.data[9] = 0;
-    // joint_group_positions.data[10] = -1.4;
-    // joint_group_positions.data[11] = 2.75;
+    joint_group_positions.data.resize(19);
+     joint_group_positions.data[0] = 0;
+     joint_group_positions.data[1] = 1.4;
+     joint_group_positions.data[2] = -2.75;
+     joint_group_positions.data[3] = 0;
+     joint_group_positions.data[4] = -1.4;
+     joint_group_positions.data[5] = 2.75;
+     joint_group_positions.data[6] = 0;
+     joint_group_positions.data[7] = 1.4;
+     joint_group_positions.data[8] = -2.75;
+     joint_group_positions.data[9] = 0;
+     joint_group_positions.data[10] = -1.4;
+     joint_group_positions.data[11] = 2.75;
 
-   joint_group_positions.data.resize(19);
-   joint_group_positions.data[0] = 0;
-   joint_group_positions.data[1] = 0.5;
-   joint_group_positions.data[2] = -1;
-   joint_group_positions.data[3] = 0;
-   joint_group_positions.data[4] = -0.5;
-   joint_group_positions.data[5] = 1;
-   joint_group_positions.data[6] = 0;
-   joint_group_positions.data[7] = 0.5;
-   joint_group_positions.data[8] = -1;
-   joint_group_positions.data[9] = 0;
-   joint_group_positions.data[10] = -0.5;
-   joint_group_positions.data[11] = 1;
+//     joint_group_positions.data[0] = 0;
+//     joint_group_positions.data[1] = 0.7;
+//     joint_group_positions.data[2] = -1.4;
+//     joint_group_positions.data[3] = 0;
+//     joint_group_positions.data[4] = -0.7;
+//     joint_group_positions.data[5] = 1.4;
+//     joint_group_positions.data[6] = 0;
+//     joint_group_positions.data[7] = 0.7;
+//     joint_group_positions.data[8] = -1.4;
+//     joint_group_positions.data[9] = 0;
+//     joint_group_positions.data[10] = -0.7;
+//     joint_group_positions.data[11] = 1.4;
+
+//   joint_group_positions.data.resize(19);
+//   joint_group_positions.data[0] = 0;
+//   joint_group_positions.data[1] = 0.04;
+//   joint_group_positions.data[2] = -0.08;
+//   joint_group_positions.data[3] = 0;
+//   joint_group_positions.data[4] = -0;
+//   joint_group_positions.data[5] = 0;
+//   joint_group_positions.data[6] = 0;
+//   joint_group_positions.data[7] = -0;
+//   joint_group_positions.data[8] = 0;
+//   joint_group_positions.data[9] = 0;
+//   joint_group_positions.data[10] = 0;
+//   joint_group_positions.data[11] = 0;
 
 
-    joint_group_positions.data[12] = -0.2;
-    joint_group_positions.data[13] = -0.6;
-    joint_group_positions.data[14] = 0;
-    joint_group_positions.data[15] = 1.3;
-    joint_group_positions.data[16] = 0;
-    joint_group_positions.data[17] = 1.1;
-    joint_group_positions.data[18] = 0;
+//    joint_group_positions.data[12] = -0;
+//    joint_group_positions.data[13] = -1.5 + M_PI/2;
+//    joint_group_positions.data[14] = 0;
+//    joint_group_positions.data[15] = 2.29 - M_PI /2 ;
+//    joint_group_positions.data[16] = 0;
+//    joint_group_positions.data[17] = 0.77;
+//    joint_group_positions.data[18] = -0;
+
 
 
     std::vector<double> joint_angles_temp_;
     joint_angles_temp_.resize(18);
+
     std::ifstream readfile;
     readfile.open("/home/kun/catkin_ws_dependency/haibinangles.txt");//calculated.txt
     assert(readfile.is_open());
@@ -99,32 +114,63 @@ int main(int argc, char **argv)
 
     readfile.close();
 
-    joint_group_positions.data.resize(19);
-    joint_group_positions.data[0] = joint_angles_temp_[0];
-    joint_group_positions.data[1] = joint_angles_temp_[1];
-    joint_group_positions.data[2] = joint_angles_temp_[2];
+//    joint_group_positions.data[0] = joint_angles_temp_[0];
+//    joint_group_positions.data[1] = joint_angles_temp_[1];
+//    joint_group_positions.data[2] = joint_angles_temp_[2];
 
-    joint_group_positions.data[3] = joint_angles_temp_[3];
-    joint_group_positions.data[4] = joint_angles_temp_[4];
-    joint_group_positions.data[5] = joint_angles_temp_[5];
+//    joint_group_positions.data[3] = joint_angles_temp_[3];
+//    joint_group_positions.data[4] = joint_angles_temp_[4];
+//    joint_group_positions.data[5] = joint_angles_temp_[5];
 
-    joint_group_positions.data[6] = joint_angles_temp_[6];
-    joint_group_positions.data[7] = joint_angles_temp_[7];
-    joint_group_positions.data[8] = joint_angles_temp_[8];
+//    joint_group_positions.data[6] = joint_angles_temp_[6];
+//    joint_group_positions.data[7] = joint_angles_temp_[7];
+//    joint_group_positions.data[8] = joint_angles_temp_[8];
 
-    joint_group_positions.data[9] = joint_angles_temp_[9];
-    joint_group_positions.data[10] = joint_angles_temp_[10];
-    joint_group_positions.data[11] = joint_angles_temp_[11];
+//    joint_group_positions.data[9] = joint_angles_temp_[9];
+//    joint_group_positions.data[10] = joint_angles_temp_[10];
+//    joint_group_positions.data[11] = joint_angles_temp_[11];
+
+//    joint_group_positions.data[12] = joint_angles_temp_[12];;
+//    joint_group_positions.data[13] = joint_angles_temp_[13];;
+//    joint_group_positions.data[14] = 0;
+//    joint_group_positions.data[15] = joint_angles_temp_[14];;
+//    joint_group_positions.data[16] = joint_angles_temp_[15];;
+//    joint_group_positions.data[17] = joint_angles_temp_[16];;
+//    joint_group_positions.data[18] = joint_angles_temp_[17];;
 
 
     joint_group_positions.data[12] = joint_angles_temp_[12];
-    joint_group_positions.data[13] = joint_angles_temp_[13] + M_PI / 2;
+    joint_group_positions.data[13] = joint_angles_temp_[13];
     joint_group_positions.data[14] = 0;
-    joint_group_positions.data[15] = joint_angles_temp_[14] - M_PI / 2;
+    joint_group_positions.data[15] = joint_angles_temp_[14];
     joint_group_positions.data[16] = joint_angles_temp_[15];
     joint_group_positions.data[17] = joint_angles_temp_[16];
     joint_group_positions.data[18] = joint_angles_temp_[17];
 
+//    joint_group_positions.data[0] = 0.317;
+//    joint_group_positions.data[1] = 0.363;
+//    joint_group_positions.data[2] = -2.67;
+
+//    joint_group_positions.data[3] = 0.1098;
+//    joint_group_positions.data[4] = -0.1935;
+//    joint_group_positions.data[5] = 1.194;
+
+//    joint_group_positions.data[6] = -0.3098;
+//    joint_group_positions.data[7] = 1;
+//    joint_group_positions.data[8] = -1.194;
+
+//    joint_group_positions.data[9] = -0.116;
+//    joint_group_positions.data[10] = -1.17;
+//    joint_group_positions.data[11] = 1.44;
+
+
+//    joint_group_positions.data[12] = 0.68;
+//    joint_group_positions.data[13] = 1.15;
+//    joint_group_positions.data[14] = 0;
+//    joint_group_positions.data[15] = 1.07;
+//    joint_group_positions.data[16] = 0;
+//    joint_group_positions.data[17] = 0.778;
+//    joint_group_positions.data[18] = 1.53;
 
     ros::Subscriber jointCommandSub = nh.subscribe("/action_server_test_node/all_joint_position", 1, jointCommandCallback);
     ros::Publisher joint_group_position_pub = nh.advertise<std_msgs::Float64MultiArray>("/all_joints_position_effort_group_controller/command",1);
